@@ -1,6 +1,7 @@
 # Table of contents
 
 * [Overview](README.md)
+* [Tags](tags.md)
 
 ## Software Management <a href="#software" id="software"></a>
 
@@ -14,7 +15,3 @@
 ## Group Policy Management <a href="#group-policy" id="group-policy"></a>
 
 * [Reset Policies](group-policy/reset-policies.md)
-
-## Misc
-
-* [Tags](misc/tags.md)
