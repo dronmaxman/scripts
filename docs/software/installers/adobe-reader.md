@@ -4,11 +4,13 @@ description: PowerShell script to silently install Adobe Acrobat Reader DC.
 
 # Adobe Reader
 
-## Prerequisites
+## Overview
 
 {% hint style="info" %}
 **Note:** You must acquire a distribution license from Adobe in order to distribute their software without breaking their Terms of Service.
 {% endhint %}
+
+**Prerequisites:**
 
 1. Apply for a distribution license [here](http://www.adobe.com/products/reader/rdr\_distribution1.html)
 2. Use the links provided by Adobe to download the installer you need (without bloatware)

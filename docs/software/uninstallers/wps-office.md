@@ -6,9 +6,13 @@ description: >-
 
 # WPS Office
 
-## Prerequisites
+## Overview
 
-No setup required for this script! Simply deploy via your RMM solution.
+{% hint style="info" %}
+**Dev Insight:** This script was written to help automate Microsoft Office deployments by removing [WPS Office](https://www.wps.com).
+{% endhint %}
+
+**Prerequisites:** This script requires no additional setup. Simply deploy it via your RMM.
 
 ## Script
 

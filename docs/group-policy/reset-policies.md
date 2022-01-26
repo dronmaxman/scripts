@@ -4,13 +4,13 @@ description: PowerShell script to clear all local group policies.
 
 # Reset Policies
 
-## Prerequisites
+## Overview
 
 {% hint style="info" %}
 **Note:** This script only resets local group policies (LGPO). It does not affect group policies applied from a Domain Controller.
 {% endhint %}
 
-No setup required for this script! Simply deploy via your RMM solution.
+**Prerequisites:** This script requires no additional setup. Simply deploy it via your RMM.
 
 ## Script
 
