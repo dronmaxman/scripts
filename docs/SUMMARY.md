@@ -14,3 +14,7 @@
 ## Group Policy Management <a href="#group-policy" id="group-policy"></a>
 
 * [Reset Policies](group-policy/reset-policies.md)
+
+## Misc
+
+* [Tags](misc/tags.md)
