@@ -6,6 +6,7 @@
 
 * [Installers](software/installers/README.md)
   * [Adobe Reader](software/installers/adobe-reader.md)
+  * [Google Earth Pro](software/installers/google-earth-pro.md)
   * [Zoom Meetings](software/installers/zoom-meetings.md)
 * [Uninstallers](software/uninstallers/README.md)
   * [WPS Office](software/uninstallers/wps-office.md)
