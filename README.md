@@ -1,2 +1,2 @@
-# scripts
+# Scripts
 Shared Script Repository
