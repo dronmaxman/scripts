@@ -1,7 +1,6 @@
 # Table of contents
 
 * [Overview](README.md)
-* [Tags](tags.md)
 
 ## Software Management <a href="#software" id="software"></a>
 
