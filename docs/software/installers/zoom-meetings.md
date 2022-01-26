@@ -7,7 +7,7 @@ description: PowerShell script to silently install the latest version of Zoom Me
 ## Overview
 
 {% hint style="info" %}
-**Dev Insight:** This script was written during the COVID-19 pandemic as a way to quickly deploy [Zoom Meetings](https://zoom.us) to client devices.
+**Dev Insight:** This script was written during the beginning of the COVID-19 pandemic as a way to quickly deploy [Zoom Meetings](https://zoom.us) to client devices.
 {% endhint %}
 
 **Prerequisites:** This script requires no additional setup. Simply deploy it via your RMM.
