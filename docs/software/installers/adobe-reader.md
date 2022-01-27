@@ -24,7 +24,9 @@ description: PowerShell script to silently install Adobe Acrobat Reader DC.
 
 ## Learn More
 
-Want to learn more about how this script works? Included below are official documentation links for all cmdlets used in this script, as well as product specific documentation.
+Want to learn more about how this script works? Included below are official documentation links for all cmdlets used in this script, as well as other useful documentation where applicable.
+
+{% embed url="https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_environment_variables?view=powershell-7.2" %}
 
 {% embed url="https://www.adobe.com/devnet-docs/acrobatetk/tools/DesktopDeployment/cmdline.html" %}
 
