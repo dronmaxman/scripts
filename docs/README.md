@@ -4,8 +4,6 @@ description: Shared script library for MSPs to automate various tasks.
 
 # Overview
 
-## About
-
 This library is a repository of PowerShell scripts designed for use by my fellow **Managed Service Providers** (MSPs) to automate tasks and manage client devices. It is primarily geared towards smaller MSPs.
 
 **Each Script Page Includes:**
