@@ -10,7 +10,7 @@ This library is a repository of PowerShell scripts designed for use by my fellow
 
 * An overview of the script
 * Prerequisites to running the script, if applicable
-* Documentation for cmdlets, products, etc. used by the script
+* Documentation for cmdlets, products, etc. used in the script
 
 Ultimately, this library serves as a place for me to give back to the community while also working on self-improvement in various skillsets and product knowledge.
 
