@@ -14,6 +14,10 @@ description: PowerShell script to initiate an update of Microsoft Office product
 
 ## Script
 
+{% hint style="info" %}
+**Note:** Need to update Microsoft Office on MacOS? [See here](https://docs.microsoft.com/en-us/deployoffice/mac/update-office-for-mac-using-msupdate).
+{% endhint %}
+
 {% embed url="https://gist.github.com/wise-io/94aab9d0936908cd0e933a08351e818c" %}
 
 **Simple Batch Script Alternative:**
