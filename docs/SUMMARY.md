@@ -12,7 +12,7 @@
   * [WPS Office](software/uninstallers/wps-office.md)
   * [LibreOffice](software/uninstallers/libreoffice.md)
 * [Microsoft Office](software/microsoft-office/README.md)
-  * [Update](software/microsoft-office/update.md)
+  * [Update Office](software/microsoft-office/update.md)
 
 ## Group Policy Management <a href="#group-policy" id="group-policy"></a>
 
