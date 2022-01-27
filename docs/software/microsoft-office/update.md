@@ -25,7 +25,7 @@ description: PowerShell script to initiate an update of Microsoft Office product
 Want to learn more about how this script works? Included below are official documentation links for all cmdlets used in this script, as well as other useful documentation where applicable.
 
 {% hint style="info" %}
-**Note:** Unfortunately, the [official documentation link](https://docs.microsoft.com/en-us/archive/blogs/odsupport/the-new-update-now-feature-for-office-2013-click-to-run-for-office365-and-its-associated-command-line-and-switches/) for **OfficeC2RClient.exe** is broken. Here is a [link to an archived version](https://web.archive.org/web/20190420045307/https://blogs.technet.microsoft.com/odsupport/2014/03/03/the-new-update-now-feature-for-office-2013-click-to-run-for-office365-and-its-associated-command-line-and-switches/) of this documentation.
+**Note:** Unfortunately, the [official documentation link](https://docs.microsoft.com/en-us/archive/blogs/odsupport/the-new-update-now-feature-for-office-2013-click-to-run-for-office365-and-its-associated-command-line-and-switches/) for **OfficeC2RClient.exe** is broken. Here is a [link to an archived version](https://web.archive.org/web/20190420045307/https://blogs.technet.microsoft.com/odsupport/2014/03/03/the-new-update-now-feature-for-office-2013-click-to-run-for-office365-and-its-associated-command-line-and-switches/).
 {% endhint %}
 
 **Cmdlet Documentation:**
