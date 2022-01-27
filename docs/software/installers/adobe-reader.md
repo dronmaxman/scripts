@@ -28,8 +28,9 @@ Want to learn more about how this script works? Included below are official docu
 
 {% embed url="https://www.adobe.com/devnet-docs/acrobatetk/tools/DesktopDeployment/cmdline.html" %}
 
-{% embed url="https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/invoke-webrequest?view=powershell-7.2" %}
+**Cmdlet Documentation:**
 
-{% embed url="https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.management/start-process?view=powershell-7.2" %}
+* [Invoke-WebRequest](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/invoke-webrequest?view=powershell-7.2)
+* [Start-Process](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.management/start-process?view=powershell-7.2)
+* [Remove-Item](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.management/remove-item?view=powershell-7.2)
 
-{% embed url="https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.management/remove-item?view=powershell-7.2" %}
