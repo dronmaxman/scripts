@@ -1,6 +1,6 @@
 # Table of contents
 
-* [Script Library](README.md)
+* [Overview](README.md)
 
 ## Software Management <a href="#software" id="software"></a>
 
