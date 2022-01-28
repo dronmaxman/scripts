@@ -14,7 +14,7 @@ description: PowerShell script to clear all local group policies.
 
 ## Script
 
-{% hint style="warning" %}
+{% hint style="danger" %}
 **Warnings:** \
 Running this script will result in the loss of existing local policies.\
 Using the `-Reboot` switch may result in the loss of unsaved user files.
