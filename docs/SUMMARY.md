@@ -6,6 +6,7 @@
 
 * [Installers](software/installers/README.md)
   * [Adobe Reader](software/installers/adobe-reader.md)
+  * [Custom Fonts](software/installers/custom-fonts.md)
   * [Google Earth Pro](software/installers/google-earth-pro.md)
   * [Zoom Meetings](software/installers/zoom-meetings.md)
 * [Uninstallers](software/uninstallers/README.md)
