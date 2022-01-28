@@ -9,8 +9,9 @@
   * [Google Earth Pro](software/installers/google-earth-pro.md)
   * [Zoom Meetings](software/installers/zoom-meetings.md)
 * [Uninstallers](software/uninstallers/README.md)
-  * [WPS Office](software/uninstallers/wps-office.md)
   * [LibreOffice](software/uninstallers/libreoffice.md)
+  * [Meraki SM](software/uninstallers/meraki-sm.md)
+  * [WPS Office](software/uninstallers/wps-office.md)
 * [Microsoft Office](software/microsoft-office/README.md)
   * [Update Office](software/microsoft-office/update.md)
 
