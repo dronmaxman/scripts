@@ -12,7 +12,7 @@ description: PowerShell script to silently download and install fonts from a zip
 
 **Prerequisites:**
 
-1. Gather necessary fonts
+1. Gather necessary font files (`.ttf`, `.ttc`, or `.otf`)
 2. Compress fonts into an archive (.zip)
 3. Download [FontReg.exe](http://code.kliu.org/misc/fontreg/)
 4. Upload archive & FontReg.exe to your preferred file host
