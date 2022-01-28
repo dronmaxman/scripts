@@ -25,6 +25,8 @@ description: PowerShell script to silently download and install fonts from a zip
 **Note:** To help prevent abuse, this script will only move font files with the `.ttf`, `.ttc`, or `.otf` file extensions to the Local Font Store. Custom fonts will need to be one of these types in order to be installed.
 {% endhint %}
 
+**Usage:** `.\InstallFonts.ps1 -URL https://example.com/fonts.zip`
+
 {% embed url="https://gist.github.com/wise-io/33d424b5c9b766eb45d1a70c170376e2" %}
 
 ## Learn More
