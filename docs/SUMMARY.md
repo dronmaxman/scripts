@@ -16,6 +16,6 @@
 * [Microsoft Office](software/microsoft-office/README.md)
   * [Update Office](software/microsoft-office/update.md)
 
-## Group Policy Management <a href="#group-policy" id="group-policy"></a>
+## Misc
 
-* [Reset Policies](group-policy/reset-policies.md)
+* [Reset Group Policies](misc/reset-policies.md)
