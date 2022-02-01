@@ -18,4 +18,5 @@
 
 ## Misc
 
-* [Reset Group Policies](misc/reset-policies.md)
+* [Backup SQL Databases](misc/backup-sql-databases.md)
+* [Reset Group Policies](group-policy/reset-policies.md)

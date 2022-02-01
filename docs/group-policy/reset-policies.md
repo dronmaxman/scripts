@@ -2,7 +2,7 @@
 description: PowerShell script to clear all local group policies.
 ---
 
-# Reset Policies
+# Reset Group Policies
 
 ## Overview
 
