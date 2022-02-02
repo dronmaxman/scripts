@@ -12,6 +12,7 @@
 * [Uninstallers](software/uninstallers/README.md)
   * [LibreOffice](software/uninstallers/libreoffice.md)
   * [Meraki SM](software/uninstallers/meraki-sm.md)
+  * [QuickTime](software/uninstallers/quicktime.md)
   * [WPS Office](software/uninstallers/wps-office.md)
 * [Microsoft Office](software/microsoft-office/README.md)
   * [Update Office](software/microsoft-office/update.md)
