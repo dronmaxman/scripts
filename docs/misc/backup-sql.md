@@ -14,15 +14,17 @@ description: PowerShell script to backup all SQL databases on the local machine.
 
 For this script to run successfully, the user running the script will need to have permission to perform SQL database backups on all databases, including system databases. It is recommended to run the script as `SYSTEM` and set permissions on each database using the process below.
 
+**Granting backup database permissions to `SYSTEM`:**
+
 1. Login to [Microsoft SQL Server Management Studio (SSMS)](https://docs.microsoft.com/en-us/sql/ssms/sql-server-management-studio-ssms?view=sql-server-ver15) on the SQL Server
 2. Navigate to Server\Instance > Security > Logins
-3. Right-click `NT AUTHORITY\SYSTEM` and choose Properties
+3. Right-click `NT AUTHORITY\SYSTEM` and choose **Properties**
 4. Under **Server Roles**, make sure `public` is checked
 5. Under **User Mapping**, check each database and select the following database role memberships:
-   1. db\_backupoperator
-   2. public
-   3. db\_denydatareader (optional)
-   4. db\_denydatawriter (optional)
+   1. `public`
+   2. `db_backupoperator`
+   3. `db_denydatareader` _(optional)_
+   4. `db_denydatawriter`_(optional)_
 
 After database permissions are set, you can deploy the script via your RMM.
 
