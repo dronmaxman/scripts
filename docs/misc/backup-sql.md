@@ -22,13 +22,15 @@ For this script to run successfully, the user running the script will need to ha
 2. Navigate to Server\Instance > Security > Logins
 3. Right-click `NT AUTHORITY\SYSTEM` and choose **Properties**
 4. Under **Server Roles**, make sure `public` is checked
-5. Under **User Mapping**, check each database and select the following database role memberships:
+5. Under **User Mapping**, check each database and select the following database role memberships for each:
    1. `public`
    2. `db_backupoperator`
    3. `db_denydatareader` _(optional)_
    4. `db_denydatawriter`_(optional)_
 
 After database permissions are set, you can deploy the script via your RMM.
+
+![](../.gitbook/assets/object-explorer.png) ![](../.gitbook/assets/server-roles.png) ![](../.gitbook/assets/user-mappings.png)
 
 ## Script
 
@@ -48,7 +50,7 @@ After database permissions are set, you can deploy the script via your RMM.
 Checking for necessary PowerShell modules...
 Necessary modules installed.
 
-Databases in localhost\SQL:
+Databases in localhost\SQLEXPRESS:
 
 Name                 Status           Size     Space  Recovery Compat. Owner   
                                             Available  Model     Level         
@@ -72,7 +74,7 @@ Backup jobs complete.
 Checking for necessary PowerShell modules...
 Necessary modules installed.
 
-Backup history for localhost\SQL (past month):
+Backup history for localhost\SQLEXPRESS (past month):
 
 DatabaseName BackupSetType BackupStartDate      BackupFinishDate     Compressed
                                                                      BackupSize

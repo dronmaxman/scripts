@@ -7,7 +7,7 @@ description: PowerShell script to silently install the latest version of Google 
 ## Overview
 
 {% hint style="info" %}
-**Dev Insight:** This script was written to deploy [Google Earth Pro](https://www.google.com/earth/versions/#earth-pro) to all machines at a Construction Company.
+**Fun Fact:** Google Earth Pro originally cost $399/yr, but [Google began offering it for free in  January 2015](https://maps.googleblog.com/2015/01/google-earth-pro-is-now-free.html).
 {% endhint %}
 
 **Prerequisites:** This script requires no additional setup. Simply deploy it via your RMM.
