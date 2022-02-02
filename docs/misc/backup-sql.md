@@ -28,9 +28,9 @@ For this script to run successfully, the user running the script will need to ha
    3. `db_denydatareader` _(optional)_
    4. `db_denydatawriter`_(optional)_
 
-After database permissions are set, you can deploy the script via your RMM.
-
 ![](../.gitbook/assets/object-explorer.png) ![](../.gitbook/assets/server-roles.png) ![](../.gitbook/assets/user-mappings.png)
+
+After database permissions are set, you can deploy the script via your RMM.
 
 ## Script
 
