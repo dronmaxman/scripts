@@ -14,6 +14,8 @@ description: PowerShell script to backup all SQL databases on the local machine.
 
 For this script to run successfully, the user running the script will need to have permission to perform SQL database backups on all databases, including system databases. It is recommended to run the script as `SYSTEM` and set permissions on each database using the process below.
 
+{% embed url="https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-ver15" %}
+
 **Granting backup database permissions to `SYSTEM`:**
 
 1. Login to [Microsoft SQL Server Management Studio (SSMS)](https://docs.microsoft.com/en-us/sql/ssms/sql-server-management-studio-ssms?view=sql-server-ver15) on the SQL Server
