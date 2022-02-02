@@ -7,7 +7,7 @@ description: PowerShell script to silently download and install fonts from a zip
 ## Overview
 
 {% hint style="info" %}
-**Dev Insight:** This script was written to deploy custom fonts required by an accounting software vendor to print checks. It uses a third-party utility called [FontReg](http://code.kliu.org/misc/fontreg/).
+**Dev Insight:** This script was written to deploy custom fonts required by an accounting software vendor to print checks. It uses a third-party utility called [**FontReg**](http://code.kliu.org/misc/fontreg/).
 {% endhint %}
 
 **Prerequisites:**
