@@ -18,7 +18,11 @@
 * [Microsoft Office](software/microsoft-office/README.md)
   * [Update Office](software/microsoft-office/update.md)
 
+## Windows Settings
+
+* [Create Restore Point](windows-settings/create-restore-point.md)
+* [Reset Group Policies](windows-settings/reset-policies.md)
+
 ## Misc
 
 * [Backup SQL Databases](misc/backup-sql.md)
-* [Reset Group Policies](group-policy/reset-policies.md)
