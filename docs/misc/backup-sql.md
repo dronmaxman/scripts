@@ -52,15 +52,13 @@ Necessary modules installed.
 
 Databases in localhost\SQLEXPRESS:
 
-Name                 Status           Size     Space  Recovery Compat. Owner   
-                                            Available  Model     Level         
-----                 ------           ---- ---------- -------- ------- -----   
-myDatabase           Normal             MB         KB Simple       100 sa  
-master               Normal        6.00 MB  576.00 KB Simple       140 sa      
-model                Normal       16.00 MB    5.70 MB Simple       140 sa      
-msdb                 Normal      149.56 MB  888.00 KB Simple       130 sa      
+Name                 Status           Size Owner   
+                                                    
+----                 ------           ---- -----   
+master               Normal        6.00 MB sa      
+model                Normal       16.00 MB sa      
+msdb                 Normal      149.56 MB sa      
 
-Performing backup of [myDatabase]...
 Performing backup of [master]...
 Performing backup of [model]...
 Performing backup of [msdb]...
@@ -91,11 +89,6 @@ msdb              Database 2/1/2022 12:15:27 PM 2/1/2022 12:15:29 PM  126077952
 msdb              Database 2/1/2022 1:11:16 PM  2/1/2022 1:11:19 PM   126073856
 msdb              Database 2/1/2022 1:51:43 PM  2/1/2022 1:51:48 PM   126073856
 msdb              Database 2/1/2022 2:07:29 PM  2/1/2022 2:07:32 PM   126073856
-myDatabase        Database 1/31/2022 6:39:41 PM 1/31/2022 6:41:08 PM 4542370816
-myDatabase        Database 1/31/2022 6:44:40 PM 1/31/2022 6:46:15 PM 4542366720
-myDatabase     Incremental 1/31/2022 6:49:26 PM 1/31/2022 6:49:26 PM     529408
-myDatabase     Incremental 1/31/2022 7:34:51 PM 1/31/2022 7:34:51 PM     529408
-
 
 Backups were not performed.
 ```
