@@ -2,7 +2,7 @@
 description: PowerShell script to initiate an update of Microsoft Office products.
 ---
 
-# Update
+# Update Office
 
 ## Overview
 
@@ -18,11 +18,38 @@ description: PowerShell script to initiate an update of Microsoft Office product
 **Note:** Need to update Microsoft Office on MacOS? [See here](https://docs.microsoft.com/en-us/deployoffice/mac/update-office-for-mac-using-msupdate).
 {% endhint %}
 
-{% embed url="https://gist.github.com/wise-io/94aab9d0936908cd0e933a08351e818c" %}
+{% code title="UpdateOffice.ps1" %}
+```powershell
+# Initiates Microsoft Office updates
+$Path = "C:\Program Files\Common Files\Microsoft Shared\ClickToRun\OfficeC2RClient.exe"
+$Arguments = "/update user"
+
+# Get the process name
+$ProcessName = [System.IO.Path]::GetFileNameWithoutExtension($Path)
+
+# Check if Microsoft Office updates are running
+$Running = Get-Process $ProcessName -ErrorAction SilentlyContinue
+
+# If not running, start Microsoft Office updates
+If (!$Running) { 
+  Write-Output 'Starting Microsoft Office update process...'
+  Start-Process -FilePath $Path -ArgumentList $Arguments
+}Else { 
+  Write-Output 'The Microsoft Office update process is currently running.'
+}
+
+```
+{% endcode %}
 
 **Simple Batch Script Alternative:**
 
 {% embed url="https://gist.github.com/wise-io/f91f2f6ff72f5b0d9459f2994ae61c0d" %}
+
+{% code title="UpdateOffice.bat" %}
+```batch
+"C:\Program Files\Common Files\Microsopsft Shared\ClickToRun\OfficeC2RClient.exe" /update user
+```
+{% endcode %}
 
 ## Learn More
 
