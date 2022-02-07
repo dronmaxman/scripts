@@ -10,7 +10,7 @@ description: PowerShell script to install Microsoft Office via the Office Deploy
 **Dev Insight:** This script was written as part of a bundle of scripts to help automate and manage Microsoft Office deployments.
 {% endhint %}
 
-This script uses Microsoft's Office Deployment Tool (ODT) to download and install Microsoft Office using an XML configuration file that you specify. With the XML file, you can specify which Office components to install / remove, which languages to install, and even default settings.
+This script uses Microsoft's **Office Deployment Tool (ODT)** to download and install Microsoft Office using an XML configuration file that you specify. With the XML file, you can specify which Office components to install / remove, which languages to install, and even default settings.
 
 {% embed url="https://www.microsoft.com/en-us/download/details.aspx?id=49117" %}
 
