@@ -7,7 +7,7 @@ description: PowerShell script to silently uninstall Meraki Systems Manager Agen
 ## Overview
 
 {% hint style="info" %}
-**Did You Know:** Cisco used to offer a free tier of [Meraki Systems Manager](https://meraki.cisco.com/products/systems-manager/#) for up to 100 devices. This was a great way for small businesses to get access to MDM and RMM-like functionality for no cost. Cisco eventually retired this tier but still allows existing organizations to utilize it for free.
+**Did You Know:** Cisco used to offer a free tier of **** [**Meraki Systems Manager**](https://meraki.cisco.com/products/systems-manager/#) **** for up to 100 devices. This was a great way for small businesses to get access to MDM and RMM-like functionality for no cost. Cisco eventually retired this tier but still allows existing organizations to utilize it for free.
 {% endhint %}
 
 **Prerequisites:** This script requires no additional setup. Simply deploy it via your RMM.

@@ -7,7 +7,7 @@ description: PowerShell script to backup all SQL databases on the local machine.
 ## Overview
 
 {% hint style="info" %}
-**Dev Insight:** This script was written to provide SQL backups to clients using [SQL Express](https://www.microsoft.com/en-us/sql-server/sql-server-downloads) with a backup solution that doesn't natively support SQL. **It is designed to be used on a schedule in tandem with a file/image based backup solution.**
+**Dev Insight:** This script was written to provide SQL backups to clients using [**SQL Express**](https://www.microsoft.com/en-us/sql-server/sql-server-downloads) with a backup solution that doesn't natively support SQL. **It is designed to be used on a schedule in tandem with a file/image based backup solution.**
 {% endhint %}
 
 **Prerequisites:**&#x20;
@@ -18,7 +18,7 @@ For this script to run successfully, the user running the script will need to ha
 
 **Granting backup database permissions to `SYSTEM`:**
 
-1. Install & login to [Microsoft SQL Server Management Studio (SSMS)](https://docs.microsoft.com/en-us/sql/ssms/sql-server-management-studio-ssms?view=sql-server-ver15) on the SQL Server
+1. Install & login to **** [**Microsoft SQL Server Management Studio (SSMS)**](https://docs.microsoft.com/en-us/sql/ssms/sql-server-management-studio-ssms?view=sql-server-ver15) **** on the SQL Server
 2. Navigate to Server\Instance > Security > Logins
 3. Right-click `NT AUTHORITY\SYSTEM` and choose **Properties**
 4. Under **Server Roles**, make sure `public` is checked

@@ -9,7 +9,7 @@ description: >-
 ## Overview
 
 {% hint style="info" %}
-**Dev Insight:** This script was written as part of a bundle of scripts to help automate Microsoft Office deployments by removing [WPS Office](https://www.wps.com).
+**Dev Insight:** This script was written as part of a bundle of scripts to help automate Microsoft Office deployments by removing [**WPS Office**](https://www.wps.com).
 {% endhint %}
 
 **Prerequisites:** This script requires no additional setup. Simply deploy it via your RMM.

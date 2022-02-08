@@ -7,7 +7,7 @@ description: PowerShell script to silently uninstall LibreOffice (x32 & x64).
 ## Overview
 
 {% hint style="info" %}
-**Dev Insight:** This script was written as part of a bundle of scripts to help automate Microsoft Office deployments by removing [LibreOffice](https://www.libreoffice.org).
+**Dev Insight:** This script was written as part of a bundle of scripts to help automate Microsoft Office deployments by removing [**LibreOffice**](https://www.libreoffice.org).
 {% endhint %}
 
 **Prerequisites:** This script requires no additional setup. Simply deploy it via your RMM.
