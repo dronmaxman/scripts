@@ -16,5 +16,12 @@ This library is a repository of PowerShell scripts designed for use by my fellow
 
 Ultimately, this library serves as a place for me to give back to the community while also working on self-improvement in various skillsets and product knowledge.
 
-Scripts shared with :heart: by [**Red Letter Tech, LLC**](https://redletter.tech).
+{% hint style="info" %}
+**Note:** PowerShell scripts included in this library are built for and tested against Windows 10 or later, which include **PowerShell 5.1**. Earlier versions of Windows / PowerShell will be missing cmdlets, such as `Invoke-WebRequest`, that were introduced in later versions.
+{% endhint %}
 
+{% hint style="info" %}
+**Note:** While the scripts are designed to be RMM agnostic, they are only tested against [**NinjaOne**](https://www.ninjaone.com), my current RMM platform.
+{% endhint %}
+
+Scripts shared with :heart: by [**Red Letter Tech, LLC**](https://redletter.tech).
