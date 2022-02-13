@@ -1,7 +1,7 @@
 # Downloads and installs fonts from a zip archive
-Param (
-  [Parameter(Mandatory=$true)]
-  [ValidatePattern( "^(https)://" )]
+param (
+  [Parameter(Mandatory = $true)]
+  [ValidatePattern( '^(https)://' )]
   [System.Uri]$URL
 )
 
@@ -13,7 +13,7 @@ $LocalFontStore = ($env:SystemRoot + '\Fonts\')
 
 try {
   # Validate URL file extension
-  if(!(([System.IO.Path]::GetExtension($URL.ToString())) -eq '.zip')){
+  if (!(([System.IO.Path]::GetExtension($URL.ToString())) -eq '.zip')) {
     Write-Output 'Provided url did not link to a zip archive.'
     Exit
   }
@@ -25,16 +25,17 @@ try {
   Expand-Archive -Path $Archive -DestinationPath $Fonts -Force
 
   # Verify archive contains supported fonts
-  if((Get-ChildItem -Path $Fonts |  Where-Object { $_.extension -in '.ttf', '.ttc', '.otf' } | Measure-Object).Count -ne 0 ) {
+  if ((Get-ChildItem -Path $Fonts | Where-Object { $_.extension -in '.ttf', '.ttc', '.otf' } | Measure-Object).Count -ne 0 ) {
 
     # Copy fonts to local font store
     Get-ChildItem $Fonts | Where-Object { $_.extension -in '.ttf', '.ttc', '.otf' } | Copy-Item -Destination $LocalFontStore -Force
 
     # Register fonts
     Write-Output 'Registering fonts...'
-    Start-Process -Wait -Filepath $FontReg
+    Start-Process -Wait -FilePath $FontReg
 
-  }else {
+  }
+  else {
     Write-Output 'Archive did not contain supported font files (.ttf, .ttc, or .otf).'
   }
 }

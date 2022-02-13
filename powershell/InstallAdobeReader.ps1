@@ -6,12 +6,13 @@ $Installer = "$env:temp\AdobeReader.exe"
 $DownloadURL = '' # Add download URL here
 
 try {
-# Download Installer
-Invoke-WebRequest -Uri $DownloadURL -OutFile $Installer
+  # Download Installer
+  Invoke-WebRequest -Uri $DownloadURL -OutFile $Installer
 
-# Install Program
-Start-Process -Wait -Filepath $Installer -ArgumentList '/sAll /rs /msi EULA_ACCEPT=YES'
+  # Install Program
+  Start-Process -Wait -FilePath $Installer -ArgumentList '/sAll /rs /msi EULA_ACCEPT=YES'
 
-# Remove Installer
-Remove-Item $Installer
-} catch { throw $Error }
+  # Remove Installer
+  Remove-Item $Installer
+}
+catch { throw $Error }

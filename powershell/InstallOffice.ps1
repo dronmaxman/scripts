@@ -10,10 +10,10 @@
     XML Configuration Generator: https://config.office.com/
 #>
 
-Param(
-  [Parameter (Mandatory=$true)]
-  [String]$Config, # Link to configuration xml file
-  [Switch]$Download # Downloads Office if set
+param(
+  [Parameter (Mandatory = $true)]
+  [string]$Config, # Link to configuration xml file
+  [switch]$Download # Downloads Office if set
 )
 
 $DeploymentToolDownloadURL = '' # Host ODT at a trusted location
@@ -26,12 +26,13 @@ try {
   Invoke-WebRequest -Uri $Config -OutFile $ConfigFile
 
   # Download Office If Requested
-  if($Download) {
+  if ($Download) {
     Write-Output 'Downloading Microsoft Office installation files...'
-    Start-Process -Wait -Filepath $DeploymentTool -ArgumentList "/download $ConfigFile"
+    Start-Process -Wait -FilePath $DeploymentTool -ArgumentList "/download $ConfigFile"
   }
 
   # Install Office
   Write-Output 'Installing Microsoft Office...'
-  Start-Process -Wait -Filepath $DeploymentTool -ArgumentList "/configure $ConfigFile"
-} catch { throw $Error }
+  Start-Process -Wait -FilePath $DeploymentTool -ArgumentList "/configure $ConfigFile"
+}
+catch { throw $Error }

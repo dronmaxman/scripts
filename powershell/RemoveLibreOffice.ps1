@@ -1,9 +1,9 @@
 # Removes LibreOffice Installations (x32 & x64)
 $Paths = 'HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall', 'HKLM:\SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\Uninstall'
-$App = Get-ChildItem -Path $Paths | Get-ItemProperty | Where-Object {$_.DisplayName -like "LibreOffice*" } | Select-Object
+$App = Get-ChildItem -Path $Paths | Get-ItemProperty | Where-Object { $_.DisplayName -like 'LibreOffice*' } | Select-Object
 
-ForEach ($Ver in $App) {
-  If ($Ver.UninstallString) {
+foreach ($Ver in $App) {
+  if ($Ver.UninstallString) {
     $DisplayName = $Ver.DisplayName
     $Uninst = $Ver.PSChildName
     Write-Output "Uninstalling $DisplayName..."

@@ -10,7 +10,7 @@
     ./BackupSQL.ps1 -History
 #>
 
-Param ([switch]$History) # Outputs backup history - backups are not performed when used
+param ([switch]$History) # Outputs backup history - backups are not performed when used
 
 Write-Output 'Checking for necessary PowerShell modules...'
 
@@ -33,25 +33,27 @@ try {
     Install-Module -Name SqlServer -AllowClobber
     Import-Module SqlServer
   }
-} catch { throw $Error | Exit }
+}
+catch { throw $Error | Exit }
 
 Write-Output 'Necessary modules installed.'
 
 # Backup SQL databases in all instances on localhost
 $Instances = (Get-ItemProperty 'HKLM:\SOFTWARE\Microsoft\Microsoft SQL Server').InstalledInstances
-foreach ($instance in $Instances) {
+foreach ($Instance in $Instances) {
   if ($History) {
-    Write-Output "`nBackup history for localhost\$instance (past month):"
-    Get-SqlBackupHistory -ServerInstance "localhost\$instance" -Since LastMonth | Format-Table -Property 'DatabaseName', 'BackupSetType', 'BackupStartDate', 'BackupFinishDate', 'CompressedBackupSize'
-  } else {
-    $Databases = Get-SqlDatabase -ServerInstance "localhost\$instance" | Where-Object { $_.Name -ne 'tempdb' }
-    Write-Output "`nDatabases in localhost\$instance`:"
+    Write-Output "`nBackup history for localhost\$Instance (past month):"
+    Get-SqlBackupHistory -ServerInstance "localhost\$Instance" -Since LastMonth | Format-Table -Property 'DatabaseName', 'BackupSetType', 'BackupStartDate', 'BackupFinishDate', 'CompressedBackupSize'
+  }
+  else {
+    $Databases = Get-SqlDatabase -ServerInstance "localhost\$Instance" | Where-Object { $_.Name -ne 'tempdb' }
+    Write-Output "`nDatabases in localhost\$Instance`:"
     Write-Output $Databases | Format-Table -Property 'Name', 'Status', 'Size', 'Owner'
     Write-Output '' # For output formatting
 
-    foreach ($database in $Databases) {
-      Write-Output "Performing backup of $database..."
-      Backup-SqlDatabase -ServerInstance "localhost\$instance" -Database $database.name -Initialize
+    foreach ($Database in $Databases) {
+      Write-Output "Performing backup of $Database..."
+      Backup-SqlDatabase -ServerInstance "localhost\$Instance" -Database $Database.name -Initialize
     }
   }
 }
