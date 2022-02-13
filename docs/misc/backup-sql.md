@@ -66,7 +66,7 @@ Performing backup of [msdb]...
 Backup jobs complete.
 ```
 
-**Example Output with History Switch:**
+**Example History Output:**
 
 ```
 Checking for necessary PowerShell modules...
