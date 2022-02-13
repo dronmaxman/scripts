@@ -1,16 +1,20 @@
 <#
   .SYNOPSIS
-    Backup all SQL databases.
+    Backup all SQL databases
   .DESCRIPTION
-    Performs a backup of all SQL databases on all SQL instances of localhost.
+    Performs a backup of all SQL databases on all SQL instances of localhost
+  .NOTES
     Backups are stored in the default backup location of the server under the name databasename.bak
-    Previous backup files named databasename.bak will be overwritten.
+    Previous backup files named databasename.bak will be overwritten
+    Backups are not performed when the -History switch is used
   .EXAMPLE
     ./BackupSQL.ps1
     ./BackupSQL.ps1 -History
 #>
 
-param ([switch]$History) # Outputs backup history - backups are not performed when used
+param (
+  [switch]$History # Output backup history
+) 
 
 Write-Output 'Checking for necessary PowerShell modules...'
 
