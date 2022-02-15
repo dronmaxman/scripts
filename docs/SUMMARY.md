@@ -9,6 +9,7 @@
   * [Custom Fonts](software/installers/custom-fonts.md)
   * [Google Earth Pro](software/installers/google-earth-pro.md)
   * [PowerShell](software/installers/powershell.md)
+  * [Splashtop RMM Viewer](software/installers/splashtop-rmm-viewer.md)
   * [Splashtop SOS](software/installers/splashtop-sos.md)
   * [Zoom Meetings](software/installers/zoom-meetings.md)
 * [Uninstallers](software/uninstallers/README.md)
