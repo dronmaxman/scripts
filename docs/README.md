@@ -20,6 +20,6 @@ This library is a repository of PowerShell scripts designed for use by my fellow
 
 **Notes:**
 
-PowerShell scripts included in this library are built for and tested against **Windows 10 or later**, which include **PowerShell 5.1**. Earlier versions of Windows / PowerShell will be missing cmdlets, such as `Invoke-WebRequest`, or cmdlet parameters that were introduced in later versions.
+PowerShell scripts included in this library are built for and tested against **Windows 10 or later**, which include **PowerShell 5.1**. Earlier versions of Windows / PowerShell will be missing cmdlets or cmdlet parameters that were introduced in later versions.
 
 Scripts shared with :heart: by [**Red Letter Tech, LLC**](https://redletter.tech).

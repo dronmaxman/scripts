@@ -10,7 +10,12 @@ description: PowerShell script to silently deploy the Splashtop SOS executable.
 **Dev Insight:** This script can be used to prepare **** [**Splashtop SOS**](https://my.splashtop.com/splashtop\_referral/AAHHHEKrtj9mT9) **** as an alternative method of attended remote access for user support when your primary remote access tool is down.
 {% endhint %}
 
-**Prerequisites:** This script requires no additional setup. Simply deploy it via your RMM.
+**Prerequisites:**&#x20;
+
+1. Acquiring Splashtop SOS license
+2. Deploy script via RMM
+
+{% embed url="https://my.splashtop.com/splashtop_referral/AAHHHEKrtj9mT9" %}
 
 ## Script
 
