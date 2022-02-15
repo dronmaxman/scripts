@@ -19,7 +19,7 @@ $RegValue = (Get-ItemProperty -Path $RegKey -Name $RegProperty -ErrorAction Sile
 
 try {
   # Enable System Protection
-  $LocalDrives = Get-WmiObject -Class 'Win32_LogicalDisk' | Where-Object { $_.DriveType -eq 3 } | Select-Object -ExpandProperty DeviceID
+  $LocalDrives = Get-CimInstance -Class 'Win32_LogicalDisk' | Where-Object { $_.DriveType -eq 3 } | Select-Object -ExpandProperty DeviceID
   Enable-ComputerRestore -Drive $LocalDrives
 
   # Create Checkpoint
