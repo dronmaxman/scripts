@@ -14,7 +14,7 @@ try {
   Start-Process -Wait -FilePath $Installer -ArgumentList 'prevercheck /s /i'
 
   # Trust Splashtop RMM URL File Handler in Chrome & Edge (Chromium)
-  Reg.exe add 'HKLM\SOFTWARE\Policies\Google\Chrome\URLWhitelist' /v $RegValue /t REG_SZ /d $FileHandlerPrefix /f | Out-Null
+  Reg.exe add 'HKLM\SOFTWARE\Policies\Google\Chrome\URLAllowlist' /v $RegValue /t REG_SZ /d $FileHandlerPrefix /f | Out-Null
   Reg.exe add 'HKLM\SOFTWARE\Policies\Microsoft\Edge\URLAllowlist' /v $RegValue /t REG_SZ /d $FileHandlerPrefix /f | Out-Null
 }
 catch { throw $Error }
