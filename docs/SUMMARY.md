@@ -21,11 +21,11 @@
   * [Install Office](software/microsoft-office/install-office.md)
   * [Update Office](software/microsoft-office/update.md)
 
-## Windows Settings
+## Windows Settings <a href="#windows" id="windows"></a>
 
-* [Create Restore Point](windows-settings/create-restore-point.md)
-* [Group Policy Management](windows-settings/group-policy/README.md)
-  * [Reset Policies](windows-settings/group-policy/reset.md)
+* [Create Restore Point](windows/create-restore-point.md)
+* [Group Policy Management](windows/group-policy/README.md)
+  * [Reset Policies](windows/group-policy/reset.md)
 
 ## Misc
 
