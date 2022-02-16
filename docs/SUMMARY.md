@@ -24,7 +24,8 @@
 ## Windows Settings
 
 * [Create Restore Point](windows-settings/create-restore-point.md)
-* [Reset Group Policies](windows-settings/reset-policies.md)
+* [Group Policy Management](windows-settings/group-policy/README.md)
+  * [Reset Policies](windows-settings/group-policy/reset.md)
 
 ## Misc
 
