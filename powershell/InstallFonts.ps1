@@ -15,7 +15,7 @@ try {
   # Validate URL file extension
   if (!(([System.IO.Path]::GetExtension($URL.ToString())) -eq '.zip')) {
     Write-Output 'Provided url did not link to a zip archive.'
-    Exit
+    exit
   }
 
   # Download necessary files & extract font archive
