@@ -38,7 +38,10 @@ try {
     Import-Module SqlServer
   }
 }
-catch { throw $Error | exit }
+catch { 
+  throw $Error 
+  exit
+}
 
 Write-Output 'Necessary modules installed.'
 
