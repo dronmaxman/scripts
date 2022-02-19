@@ -29,7 +29,9 @@ try {
   }
 
   # Set PSGallery to trusted repository
-  Set-PSRepository -Name 'PSGallery' -InstallationPolicy Trusted
+  if (!(Get-PSRepository -Name 'PSGallery' -ErrorAction Ignore).InstallationPolicy -eq 'Trusted') {
+    Set-PSRepository -Name 'PSGallery' -InstallationPolicy Trusted
+  }
 
   # Install & Import SqlServer module
   if (!(Get-Module -ListAvailable -Name SqlServer -ErrorAction Ignore)) {
