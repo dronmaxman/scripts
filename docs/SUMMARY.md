@@ -2,6 +2,11 @@
 
 * [Overview](README.md)
 
+## Group Policy Management <a href="#group-policy" id="group-policy"></a>
+
+* [Browser Extensions](group-policy/browser-extensions.md)
+* [Reset Policies](group-policy/reset.md)
+
 ## Software Management <a href="#software" id="software"></a>
 
 * [Installers](software/installers/README.md)
@@ -24,8 +29,6 @@
 ## Windows Settings <a href="#windows" id="windows"></a>
 
 * [Create Restore Point](windows/create-restore-point.md)
-* [Group Policy Management](windows/group-policy/README.md)
-  * [Reset Policies](windows/group-policy/reset.md)
 
 ## Misc
 
