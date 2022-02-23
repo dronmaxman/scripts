@@ -29,6 +29,13 @@ The script also allows extensions to be force installed by using the `-Force` pa
 1. Document the extension IDs of extensions you want to allow/install
 2. Deploy via RMM
 
+{% hint style="info" %}
+**Note:** You can retrieve an extension's ID by installing an extension and enabling developer mode in your respective browser, or from the URL on the extension's store page.\
+
+
+**Example:** [https://microsoftedge.microsoft.com/addons/detail/office/**gggmmkjegpiggikcnhidnjjhmicpibll**](https://microsoftedge.microsoft.com/addons/detail/office/gggmmkjegpiggikcnhidnjjhmicpibll?hl=en-US)****
+{% endhint %}
+
 ## Script
 
 {% embed url="https://gist.github.com/wise-io/8a9fa635964b2b0b41b4aa0809d6ea91" %}
