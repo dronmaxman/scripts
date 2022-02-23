@@ -44,9 +44,11 @@ After database permissions are set, you can deploy the script via your RMM.
 
 {% embed url="https://gist.github.com/wise-io/6f58987378de1df2f9181ddd9f839a44" %}
 
+## Example Output
+
 <details>
 
-<summary><strong>Example Output</strong></summary>
+<summary><strong>No Parameters</strong></summary>
 
 ```
 Checking for necessary PowerShell modules...
@@ -72,7 +74,7 @@ Backup jobs complete.
 
 <details>
 
-<summary>Example Output - History</summary>
+<summary>History Parameter</summary>
 
 ```
 Checking for necessary PowerShell modules...
