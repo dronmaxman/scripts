@@ -44,7 +44,9 @@ After database permissions are set, you can deploy the script via your RMM.
 
 {% embed url="https://gist.github.com/wise-io/6f58987378de1df2f9181ddd9f839a44" %}
 
-**Example Output:**
+<details>
+
+<summary><strong>Example Output</strong></summary>
 
 ```
 Checking for necessary PowerShell modules...
@@ -66,7 +68,11 @@ Performing backup of [msdb]...
 Backup jobs complete.
 ```
 
-**Example History Output:**
+</details>
+
+<details>
+
+<summary>Example Output - History</summary>
 
 ```
 Checking for necessary PowerShell modules...
@@ -92,6 +98,8 @@ msdb              Database 2/1/2022 2:07:29 PM  2/1/2022 2:07:32 PM   126073856
 
 Backups were not performed.
 ```
+
+</details>
 
 ## Learn More
 
