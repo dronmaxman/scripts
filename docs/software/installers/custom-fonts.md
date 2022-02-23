@@ -16,7 +16,7 @@ description: PowerShell script to silently download and install fonts from a zip
 2. Compress fonts into an archive (.zip)
 3. Download [**FontReg**](http://code.kliu.org/misc/fontreg/)****
 4. Upload archive & FontReg.exe to your preferred file host
-5. Insert the url to download FontReg.exe on `line 9` of the script below
+5. Insert the url to download FontReg.exe on `line 8` of the script below
 6. Deploy via your RMM solution
 
 ## Script
