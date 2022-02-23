@@ -26,8 +26,8 @@ The script also allows extensions to be force installed by using the `-Force` pa
 
 **Prerequisites:**
 
-1. Document the extension IDs of extensions you want to allow/install.
-2. Deploy via RMM.&#x20;
+1. Document the extension IDs of extensions you want to allow/install
+2. Deploy via RMM
 
 ## Script
 

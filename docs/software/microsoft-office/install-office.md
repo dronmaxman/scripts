@@ -18,10 +18,10 @@ This script uses Microsoft's **Office Deployment Tool (ODT)** to download and in
 
 **Prerequisites:**
 
-1. Download ODT and run it to extract the **setup executable**.
-2. Create and export an XML configuration file [**here**](https://config.office.com).
-3. Upload **setup.exe** and your XML configuration file to your preferred file host.
-4. Deploy via your RMM.
+1. Download ODT and run it to extract the **setup executable**
+2. Create and export an XML configuration file [**here**](https://config.office.com)
+3. Upload **setup.exe** and your XML configuration file to your preferred file host
+4. Deploy via your RMM
 
 ## Script
 
