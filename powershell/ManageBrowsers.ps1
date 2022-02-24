@@ -2,7 +2,7 @@
   .SYNOPSIS
     Manages browser settings through local group policy objects (LGPO).
   .PARAMETER Audit
-    Outputs a table of the current browser management policies (LGPO).
+    Outputs a table of the current browser management policies (LGPO). No new polices will be set.
   .PARAMETER Reset
     Resets all existing browser management policies (LGPO). No new policies will be set.
   .PARAMETER SearchEngine
@@ -23,12 +23,12 @@ $EdgeUpdateKey = 'Software\Policies\Microsoft\EdgeUpdate'
 
 # Default Search Engine for browser policies
 if ($SearchEngine) {
-  switch ($SearchEngine) {
-    'Google' {
+  switch ($SearchEngine.ToLower()) {
+    'google' {
       $SearchURL = '{google:baseURL}search?q={searchTerms}&{google:RLZ}{google:originalQueryForSuggestion}{google:assistedQueryStats}{google:searchFieldtrialParameter}{google:searchClient}{google:sourceId}ie={inputEncoding}'
       $SuggestURL = '{google:baseURL}complete/search?output=chrome&q={searchTerms}'
     }
-    'Bing' {
+    'bing' {
       $SearchURL = '{bing:baseURL}search?q={searchTerms}'
       $SuggestURL = '{bing:baseURL}qbox?query={searchTerms}'
     }
@@ -72,9 +72,9 @@ $Keys = @($ChromeKey, $ChromeUpdateKey, $EdgeKey, $EdgeUpdateKey)
 Write-Output "`nResetting existing browser management policies..."
 foreach ($Key in $Keys) { $Policies += Get-PolicyFileEntry -Path $ComputerPolicyFile -All | Where-Object { $_.Key -eq $Key } }
 $Policies | Remove-PolicyFileEntry -Path $ComputerPolicyFile -ErrorAction Stop
-Write-Output "Browser management policies reset."
+Write-Output 'Browser management policies reset.'
 
-if (!$Reset) {
+if (!$Reset -and !$Audit) {
   $Policies = @()
   $Keys = @($ChromeKey, $EdgeKey)
 
@@ -128,19 +128,17 @@ if (!$Reset) {
   gpupdate /force /wait:0
 }
 
-if ($Audit) {
-  $Policies = @()
-  $Keys = @($ChromeKey, $ChromeUpdateKey, $EdgeKey, $EdgeUpdateKey)
-  foreach ($Key in $Keys) { $Policies += Get-PolicyFileEntry -Path $ComputerPolicyFile -All -ErrorAction Stop | Where-Object { $_.Key -eq $Key } } 
-  $TableProperties = @(@{Label = 'Policy'; Expression = { $_.ValueName } }, @{Label = 'Value'; Expression = { $_.Data } })
-  $GroupBy = @{Label = 'Browser'; Expression = { 
-      switch -Wildcard ($_.Key) {
-        '*Google*' { 'Google Chrome' }
-        '*Microsoft*' { 'Microsoft Edge' }
-      }
+$Policies = @()
+$Keys = @($ChromeKey, $ChromeUpdateKey, $EdgeKey, $EdgeUpdateKey)
+foreach ($Key in $Keys) { $Policies += Get-PolicyFileEntry -Path $ComputerPolicyFile -All -ErrorAction Stop | Where-Object { $_.Key -eq $Key } } 
+$TableProperties = @(@{Label = 'Policy'; Expression = { $_.ValueName } }, @{Label = 'Value'; Expression = { $_.Data } })
+$GroupBy = @{Label = 'Browser'; Expression = { 
+    switch -Wildcard ($_.Key) {
+      '*Google*' { 'Google Chrome' }
+      '*Microsoft*' { 'Microsoft Edge' }
     }
   }
-
-  Write-Output "`nBrowser Management Policies (LGPO)"
-  $Policies | Format-Table -Property $TableProperties -GroupBy $GroupBy
 }
+
+Write-Output "`nBrowser Management Policies (LGPO)"
+$Policies | Format-Table -Property $TableProperties -GroupBy $GroupBy
