@@ -2,7 +2,7 @@
   .SYNOPSIS
     Manages browser settings through local group policy objects (LGPO).
   .PARAMETER Audit
-    Outputs a table of the current browser management policies (LGPO). No new policies will be set.
+    Outputs a table of the current browser management policies (LGPO).
   .PARAMETER Reset
     Resets all existing browser management policies (LGPO). No new policies will be set.
   .PARAMETER SearchEngine
@@ -67,29 +67,14 @@ catch {
   exit
 }
 
-if ($Audit -or $Reset) {
-  $Policies = @()
-  $Keys = @($ChromeKey, $ChromeUpdateKey, $EdgeKey, $EdgeUpdateKey)
-  foreach ($Key in $Keys) { $Policies += Get-PolicyFileEntry -Path $ComputerPolicyFile -All | Where-Object { $_.Key -eq $Key } }
-  if ($Audit) {
-    $TableProperties = @(@{Label = 'Policy'; Expression = { $_.ValueName } }, @{Label = 'Value'; Expression = { $_.Data } })
-    $GroupBy = @{Label = 'Browser'; Expression = { 
-        switch -Wildcard ($_.Key) {
-          '*Google*' { 'Google Chrome' }
-          '*Microsoft*' { 'Microsoft Edge' }
-        }
-      }
-    }
-    Write-Output "`nBrowser Management Policies (LGPO)"
-    $Policies | Format-Table -Property $TableProperties -GroupBy $GroupBy
-  }
-  elseif ($Reset) {
-    Write-Output "`nResetting browser management policies..."
-    $Policies | Remove-PolicyFileEntry -Path $ComputerPolicyFile
-    Write-Output "Browser management policies reset.`n"
-  }
-}
-else {
+$Policies = @()
+$Keys = @($ChromeKey, $ChromeUpdateKey, $EdgeKey, $EdgeUpdateKey)
+Write-Output "`nResetting existing browser management policies..."
+foreach ($Key in $Keys) { $Policies += Get-PolicyFileEntry -Path $ComputerPolicyFile -All | Where-Object { $_.Key -eq $Key } }
+$Policies | Remove-PolicyFileEntry -Path $ComputerPolicyFile -ErrorAction Stop
+Write-Output "Browser management policies reset."
+
+if (!$Reset) {
   $Policies = @()
   $Keys = @($ChromeKey, $EdgeKey)
 
@@ -123,12 +108,6 @@ else {
     [PSCustomObject]@{ Key = $EdgeKey; ValueName = 'SmartScreenPuaEnabled'; Data = '1'; Type = 'Dword' }              # Block PUAs/PUPs
     [PSCustomObject]@{ Key = $EdgeKey; ValueName = 'TyposquattingCheckerEnabled'; Data = '1'; Type = 'Dword' }        # Warn user on typosquatting sites
     [PSCustomObject]@{ Key = $EdgeUpdateKey; ValueName = 'UpdateDefault'; Data = '1'; Type = 'Dword' }                # Always allow updates (all channels)
-    [PSCustomObject]@{                                                                                                # Disable Proxy Servers
-      Key = $EdgeKey;
-      ValueName = 'ProxySettings';
-      Data = '{"ProxyMode": "direct", "ProxyPacUrl": "", "ProxyServer": "", "ProxyBypassList": ""}';
-      Type = 'String' 
-    } 
   )
   
   # Search Engine Policies
@@ -143,11 +122,25 @@ else {
     }
   }
   
-  try {
-    Write-Output "`nSetting browser management policies..."
-    $Policies | Set-PolicyFileEntry -Path $ComputerPolicyFile
-    Write-Output "Browser management policies set.`n"
-    gpupdate /force /wait:0
+  Write-Output "`nSetting browser management policies..."
+  $Policies | Set-PolicyFileEntry -Path $ComputerPolicyFile -ErrorAction Stop
+  Write-Output "Browser management policies set.`n"
+  gpupdate /force /wait:0
+}
+
+if ($Audit) {
+  $Policies = @()
+  $Keys = @($ChromeKey, $ChromeUpdateKey, $EdgeKey, $EdgeUpdateKey)
+  foreach ($Key in $Keys) { $Policies += Get-PolicyFileEntry -Path $ComputerPolicyFile -All -ErrorAction Stop | Where-Object { $_.Key -eq $Key } } 
+  $TableProperties = @(@{Label = 'Policy'; Expression = { $_.ValueName } }, @{Label = 'Value'; Expression = { $_.Data } })
+  $GroupBy = @{Label = 'Browser'; Expression = { 
+      switch -Wildcard ($_.Key) {
+        '*Google*' { 'Google Chrome' }
+        '*Microsoft*' { 'Microsoft Edge' }
+      }
+    }
   }
-  catch { throw $Error }
+
+  Write-Output "`nBrowser Management Policies (LGPO)"
+  $Policies | Format-Table -Property $TableProperties -GroupBy $GroupBy
 }
