@@ -71,7 +71,6 @@ if ($Audit -or $Reset) {
   $Policies = @()
   $Keys = @($ChromeKey, $ChromeUpdateKey, $EdgeKey, $EdgeUpdateKey)
   foreach ($Key in $Keys) { $Policies += Get-PolicyFileEntry -Path $ComputerPolicyFile -All | Where-Object { $_.Key -eq $Key } }
-  
   if ($Audit) {
     $TableProperties = @(@{Label = 'Policy'; Expression = { $_.ValueName } }, @{Label = 'Value'; Expression = { $_.Data } })
     $GroupBy = @{Label = 'Browser'; Expression = { 
@@ -91,32 +90,38 @@ if ($Audit -or $Reset) {
   }
 }
 else {
-  $Policies = @(
+  $Policies = @()
+  $Keys = @($ChromeKey, $EdgeKey)
+
+  # Shared Policies
+  foreach ($Key in $Keys) {
+    $Policies += @(
+      [PSCustomObject]@{ Key = $Key; ValueName = 'AutoplayAllowed'; Data = '0'; Type = 'Dword' }              # Disable media autoplay
+      [PSCustomObject]@{ Key = $Key; ValueName = 'BackgroundModeEnabled'; Data = '0'; Type = 'Dword' }        # Disable background mode
+      [PSCustomObject]@{ Key = $Key; ValueName = 'ConfigureDoNotTrack'; Data = '1'; Type = 'Dword' }          # Enable Do Not Track
+      [PSCustomObject]@{ Key = $Key; ValueName = 'DefaultNotificationsSetting'; Data = '2'; Type = 'Dword' }  # Disable desktop notifications
+      [PSCustomObject]@{ Key = $Key; ValueName = 'ForceGoogleSafeSearch'; Data = '1'; Type = 'Dword' }        # Enable Google SafeSearch
+    )
+  }
+
+  $Policies += @(
     # Chrome Policies
-    [PSCustomObject]@{ Key = $ChromeKey; ValueName = 'AutoplayAllowed'; Data = '0'; Type = 'Dword' }                  # Disable media autoplay
-    [PSCustomObject]@{ Key = $ChromeKey; ValueName = 'BackgroundModeEnabled'; Data = '0'; Type = 'Dword' }            # Disable background mode
-    [PSCustomObject]@{ Key = $ChromeKey; ValueName = 'ConfigureDoNotTrack'; Data = '1'; Type = 'Dword' }              # Enable Do Not Track
-    [PSCustomObject]@{ Key = $ChromeKey; ValueName = 'ForceGoogleSafeSearch'; Data = '1'; Type = 'Dword' }            # Enable Google SafeSearch
-    [PSCustomObject]@{ Key = $ChromeKey; ValueName = 'DefaultNotificationsSetting'; Data = '2'; Type = 'Dword' }      # Disable desktop notifications
-    [PSCustomObject]@{ Key = $ChromeKey; ValueName = 'ProxyMode'; Data = 'direct'; Type = 'String' }                  # Disable proxy servers
-    [PSCustomObject]@{ Key = $ChromeKey; ValueName = 'SafeBrowsingEnabled'; Data = '1'; Type = 'Dword' }              # Enable SafeBrowsing
-    [PSCustomObject]@{ Key = $ChromeKey; ValueName = 'DisableSafeBrowsingProceedAnyway'; Data = '1'; Type = 'Dword' } # Prevent SafeBrowsing bypass
-    [PSCustomObject]@{ Key = $ChromeKey; ValueName = 'SafeSitesFilterBehavior'; Data = '1'; Type = 'Dword' }          # Filter adult content
-  
+    [PSCustomObject]@{ Key = $ChromeKey; ValueName = 'AbusiveExperienceInterventionEnforce'; Data = '1'; Type = 'Dword' }         # Prevents sites with abusive experiences from opening new windows/tabs
+    [PSCustomObject]@{ Key = $ChromeKey; ValueName = 'AdsSettingForIntrusiveAdsSites'; Data = '2'; Type = 'Dword' }               # Block intrusive Ads
+    [PSCustomObject]@{ Key = $ChromeKey; ValueName = 'DisableSafeBrowsingProceedAnyway'; Data = '1'; Type = 'Dword' }             # Prevent SafeBrowsing bypass
+    [PSCustomObject]@{ Key = $ChromeKey; ValueName = 'RemoteAccessHostAllowRemoteAccessConnections'; Data = '0'; Type = 'Dword' } # Disable Chrome Remote Access
+    [PSCustomObject]@{ Key = $ChromeKey; ValueName = 'SafeSitesFilterBehavior'; Data = '1'; Type = 'Dword' }                      # Filter adult content
+    
     # Google Software Updates
-    [PSCustomObject]@{ Key = $ChromeUpdateKey; ValueName = 'InstallDefault'; Data = '4'; Type = 'Dword' }             # Allow machine-wide installs only
-    [PSCustomObject]@{ Key = $ChromeUpdateKey; ValueName = 'UpdateDefault'; Data = '1'; Type = 'Dword' }              # Always allow updates (all channels)
+    [PSCustomObject]@{ Key = $ChromeUpdateKey; ValueName = 'InstallDefault'; Data = '4'; Type = 'Dword' }   # Allow machine-wide installs only
+    [PSCustomObject]@{ Key = $ChromeUpdateKey; ValueName = 'UpdateDefault'; Data = '1'; Type = 'Dword' }    # Always allow updates (all channels)
   
     # Microsoft Edge Policies
-    [PSCustomObject]@{ Key = $EdgeKey; ValueName = 'AutoplayAllowed'; Data = '0'; Type = 'Dword' }                    # Disable media autoplay
-    [PSCustomObject]@{ Key = $EdgeKey; ValueName = 'BackgroundModeEnabled'; Data = '0'; type = 'Dword' }              # Disable background mode
-    [PSCustomObject]@{ Key = $EdgeKey; ValueName = 'ConfigureDoNotTrack'; Data = '1'; Type = 'Dword' }                # Enable Do Not Track
-    [PSCustomObject]@{ Key = $EdgeKey; ValueName = 'DefaultNotificationsSetting'; Data = '2'; Type = 'Dword' }        # Disable desktop notifications
     [PSCustomObject]@{ Key = $EdgeKey; ValueName = 'ForceBingSafeSearch'; Data = '1'; Type = 'Dword' }                # Enable Bing Safe Search (Moderate)
-    [PSCustomObject]@{ Key = $EdgeKey; ValueName = 'ForceGoogleSafeSearch'; Data = '1'; Type = 'Dword' }              # Enable Google SafeSearch
     [PSCustomObject]@{ Key = $EdgeKey; ValueName = 'PreventSmartScreenPromptOverride'; Data = '1'; Type = 'Dword' }   # Prevent SmartScreen bypass
     [PSCustomObject]@{ Key = $EdgeKey; ValueName = 'SmartScreenEnabled'; Data = '1'; Type = 'Dword' }                 # Enable SmartScreen
     [PSCustomObject]@{ Key = $EdgeKey; ValueName = 'SmartScreenPuaEnabled'; Data = '1'; Type = 'Dword' }              # Block PUAs/PUPs
+    [PSCustomObject]@{ Key = $EdgeKey; ValueName = 'TyposquattingCheckerEnabled'; Data = '1'; Type = 'Dword' }        # Warn user on typosquatting sites
     [PSCustomObject]@{ Key = $EdgeUpdateKey; ValueName = 'UpdateDefault'; Data = '1'; Type = 'Dword' }                # Always allow updates (all channels)
     [PSCustomObject]@{                                                                                                # Disable Proxy Servers
       Key = $EdgeKey;
@@ -128,19 +133,14 @@ else {
   
   # Search Engine Policies
   if ($SearchEngine) {
-    $Policies += @(
-      # Chrome
-      [PSCustomObject]@{ Key = $ChromeKey; ValueName = 'DefaultSearchProviderEnabled'; Data = '1'; Type = 'Dword' }             # Enable default search provider
-      [PSCustomObject]@{ Key = $ChromeKey; ValueName = 'DefaultSearchProviderName'; Data = $SearchEngine; Type = 'String' }     # Set default search provider name
-      [PSCustomObject]@{ Key = $ChromeKey; ValueName = 'DefaultSearchProviderSearchURL'; Data = $SearchURL; Type = 'String' }   # Set default search provider
-      [PSCustomObject]@{ Key = $ChromeKey; ValueName = 'DefaultSearchProviderSuggestURL'; Data = $SuggestURL; Type = 'String' } # Set default suggestion provider
-  
-      # Edge
-      [PSCustomObject]@{ Key = $EdgeKey; ValueName = 'DefaultSearchProviderEnabled'; Data = '1'; Type = 'Dword' }               # Enable default search provider
-      [PSCustomObject]@{ Key = $EdgeKey; ValueName = 'DefaultSearchProviderName'; Data = $SearchEngine; Type = 'String' }       # Set default search provider name
-      [PSCustomObject]@{ Key = $EdgeKey; ValueName = 'DefaultSearchProviderSearchURL'; Data = $SearchURL; Type = 'String' }     # Set default search provider
-      [PSCustomObject]@{ Key = $EdgeKey; ValueName = 'DefaultSearchProviderSuggestURL'; Data = $SuggestURL; Type = 'String' }   # Set default suggestion provider
-    )
+    foreach ($Key in $Keys) {
+      $Policies += @(
+        [PSCustomObject]@{ Key = $Key; ValueName = 'DefaultSearchProviderEnabled'; Data = '1'; Type = 'Dword' }             # Enable default search provider
+        [PSCustomObject]@{ Key = $Key; ValueName = 'DefaultSearchProviderName'; Data = $SearchEngine; Type = 'String' }     # Set default search provider name
+        [PSCustomObject]@{ Key = $Key; ValueName = 'DefaultSearchProviderSearchURL'; Data = $SearchURL; Type = 'String' }   # Set default search provider
+        [PSCustomObject]@{ Key = $Key; ValueName = 'DefaultSearchProviderSuggestURL'; Data = $SuggestURL; Type = 'String' } # Set default suggestion provider
+      )
+    }
   }
   
   try {
