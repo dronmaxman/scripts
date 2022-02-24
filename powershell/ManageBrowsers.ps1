@@ -74,7 +74,7 @@ foreach ($Key in $Keys) { $Policies += Get-PolicyFileEntry -Path $ComputerPolicy
 $Policies | Remove-PolicyFileEntry -Path $ComputerPolicyFile -ErrorAction Stop
 Write-Output 'Browser management policies reset.'
 
-if (!$Reset -and !$Audit) {
+if (!$Audit -and !$Reset) {
   $Policies = @()
   $Keys = @($ChromeKey, $EdgeKey)
 
