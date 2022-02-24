@@ -25,7 +25,7 @@
 #>
 
 param (
-  [Alias('Report')][switch]$Audit,                  # Audit extension management policies (ADGPO & LGPO)
+  [Alias('Report')][switch]$Audit,                  # Audit extension management policies (LGPO)
   [Alias('Chrome')][string[]]$ChromeExtIDs,         # Comma separated list of Chrome extension IDs to allow
   [Alias('Edge')][string[]]$EdgeExtIDs,             # Comma separated list of Edge extension IDs to allow
   [Alias('Force', 'Install')][switch]$ForceInstall, # Force install extensions
