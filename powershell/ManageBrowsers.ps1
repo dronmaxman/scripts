@@ -73,7 +73,7 @@ if ($Audit -or $Reset) {
   foreach ($Key in $Keys) { $Policies += Get-PolicyFileEntry -Path $ComputerPolicyFile -All | Where-Object { $_.Key -eq $Key } }
   
   if ($Audit) {
-    Write-Output "`nBrowser Management Policies (LGPO)"
+    $TableProperties = @(@{Label = 'Policy'; Expression = { $_.ValueName } }, @{Label = 'Value'; Expression = { $_.Data } })
     $GroupBy = @{Label = 'Browser'; Expression = { 
         switch -Wildcard ($_.Key) {
           '*Google*' { 'Google Chrome' }
@@ -81,12 +81,7 @@ if ($Audit -or $Reset) {
         }
       }
     }
-  
-    $TableProperties = @(
-      @{Label = 'Policy'; Expression = { $_.ValueName } },
-      @{Label = 'Value'; Expression = { $_.Data } }
-    )
-
+    Write-Output "`nBrowser Management Policies (LGPO)"
     $Policies | Format-Table -Property $TableProperties -GroupBy $GroupBy
   }
   elseif ($Reset) {
