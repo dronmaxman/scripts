@@ -4,6 +4,7 @@
 
 ## Group Policy Management <a href="#group-policy" id="group-policy"></a>
 
+* [Browser Policies](group-policy/browsers.md)
 * [Browser Extensions](group-policy/browser-extensions.md)
 * [Reset Policies](group-policy/reset.md)
 

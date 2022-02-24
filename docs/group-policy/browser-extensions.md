@@ -1,7 +1,7 @@
 ---
 description: >-
-  PowerShell script to manage Chrome/Edge browser extensions through local group
-  policy.
+  PowerShell script to manage Chrome & Edge browser extensions through local
+  group policy.
 ---
 
 # Browser Extensions
@@ -24,16 +24,19 @@ The script also allows extensions to be force installed by using the `-Force` pa
 
 {% embed url="https://microsoftedge.microsoft.com/addons" %}
 
+Combining this script with the browser policies script will add an additional security layer to your clients' devices, for no additional cost.
+
+{% content-ref url="browsers.md" %}
+[browsers.md](browsers.md)
+{% endcontent-ref %}
+
 **Prerequisites:**
 
 1. Document the extension IDs of extensions you want to allow/install
 2. Deploy via RMM
 
 {% hint style="info" %}
-**Note:** You can retrieve an extension's ID by installing an extension and enabling developer mode in your respective browser, or from the URL on the extension's store page.\
-
-
-**Example:** [https://microsoftedge.microsoft.com/addons/detail/office/**gggmmkjegpiggikcnhidnjjhmicpibll**](https://microsoftedge.microsoft.com/addons/detail/office/gggmmkjegpiggikcnhidnjjhmicpibll?hl=en-US)****
+**Note:** You can retrieve an extension's ID by installing an extension and enabling developer mode in your respective browser, or from the URL on the extension's store page. [https://microsoftedge.microsoft.com/addons/detail/office/**gggmmkjegpiggikcnhidnjjhmicpibll**](https://microsoftedge.microsoft.com/addons/detail/office/gggmmkjegpiggikcnhidnjjhmicpibll?hl=en-US)****
 {% endhint %}
 
 ## Script
