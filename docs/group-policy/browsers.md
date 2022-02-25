@@ -12,7 +12,7 @@ description: >-
 **Note:** This script only manages local group policies (LGPO). It does not affect group policies applied from a Domain Controller, but will affect the resulting policies.
 {% endhint %}
 
-This script was written to provide a way to set a more secure baseline for my client's web browsers. The settings chosen to apply will work for most clients to provide some extra security while not preventing them from doing their work. That said, these settings may not work for all clients. _**Be sure to review each policy to ensure a good fit for your client base before running this script.**_
+This script was written to provide a way to set a more secure baseline for my client's web browsers. The settings chosen will work for most clients to provide some extra security while not preventing them from doing their work. That said, these settings may not work for all clients. _**Be sure to review each policy to ensure a good fit for your client base before running this script.**_
 
 Combining this script with the browser extension management script will add an additional security layer to your clients' devices, for no additional cost.
 
