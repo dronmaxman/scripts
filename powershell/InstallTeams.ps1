@@ -1,4 +1,4 @@
-# Installs Microsoft Teams
+# Installs Microsoft Teams (Machine-Wide)
 param(
   [switch]$x86 # Attempts to install 32-bit Teams regardless of architecture
 ) 
