@@ -14,6 +14,7 @@
   * [Adobe Reader](software/installers/adobe-reader.md)
   * [Custom Fonts](software/installers/custom-fonts.md)
   * [Google Earth Pro](software/installers/google-earth-pro.md)
+  * [Microsoft Teams](software/installers/microsoft-teams.md)
   * [PowerShell](software/installers/powershell.md)
   * [Splashtop RMM Viewer](software/installers/splashtop-rmm-viewer.md)
   * [Splashtop SOS](software/installers/splashtop-sos.md)
