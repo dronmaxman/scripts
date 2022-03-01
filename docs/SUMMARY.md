@@ -4,9 +4,10 @@
 
 ## Group Policy Management <a href="#group-policy" id="group-policy"></a>
 
-* [Browser Policies](group-policy/browsers.md)
-* [Browser Extensions](group-policy/browser-extensions.md)
 * [Reset Policies](group-policy/reset.md)
+* [Web Browsers](group-policy/browsers/README.md)
+  * [Browser Management](group-policy/browsers/browser-management.md)
+  * [Extension Management](group-policy/browsers/extension-management.md)
 
 ## Software Management <a href="#software" id="software"></a>
 
@@ -28,10 +29,8 @@
   * [Install Office](software/microsoft-office/install-office.md)
   * [Update Office](software/microsoft-office/update.md)
 
-## Windows Settings <a href="#windows" id="windows"></a>
-
-* [Create Restore Point](windows/create-restore-point.md)
-
 ## Misc
 
 * [Backup SQL Databases](misc/backup-sql.md)
+* [Create Restore Point](misc/create-restore-point.md)
+* [Start Program](misc/start-program.md)

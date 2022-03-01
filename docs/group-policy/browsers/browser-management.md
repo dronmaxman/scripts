@@ -4,7 +4,7 @@ description: >-
   policy.
 ---
 
-# Browser Policies
+# Browser Management
 
 ## Overview
 
@@ -16,8 +16,8 @@ This script was written to provide a way to set a more secure baseline for my cl
 
 Combining this script with the browser extension management script will add an additional security layer to your clients' devices, for no additional cost.
 
-{% content-ref url="browser-extensions.md" %}
-[browser-extensions.md](browser-extensions.md)
+{% content-ref url="extension-management.md" %}
+[extension-management.md](extension-management.md)
 {% endcontent-ref %}
 
 **Prerequisites:**
