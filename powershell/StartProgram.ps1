@@ -4,7 +4,7 @@
   .DESCRIPTION
     Starts a program if it is not already running.
   .EXAMPLE
-    ./StartProgram.ps1 -Path "C:\WINDOWS\system32\notepad.exe"
+    .\StartProgram.ps1 -Path "C:\WINDOWS\system32\notepad.exe"
 #>
 
 param (
