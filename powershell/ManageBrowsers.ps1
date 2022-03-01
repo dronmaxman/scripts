@@ -87,6 +87,15 @@ if (!$Audit -and !$Reset) {
       [PSCustomObject]@{ Key = $Key; ValueName = 'DefaultNotificationsSetting'; Data = '2'; Type = 'Dword' }  # Disable desktop notifications
       [PSCustomObject]@{ Key = $Key; ValueName = 'ForceGoogleSafeSearch'; Data = '1'; Type = 'Dword' }        # Enable Google SafeSearch
     )
+
+    if ($SearchEngine) {
+      $Policies += @(
+        [PSCustomObject]@{ Key = $Key; ValueName = 'DefaultSearchProviderEnabled'; Data = '1'; Type = 'Dword' }             # Enable default search provider
+        [PSCustomObject]@{ Key = $Key; ValueName = 'DefaultSearchProviderName'; Data = $SearchEngine; Type = 'String' }     # Set default search provider name
+        [PSCustomObject]@{ Key = $Key; ValueName = 'DefaultSearchProviderSearchURL'; Data = $SearchURL; Type = 'String' }   # Set default search provider
+        [PSCustomObject]@{ Key = $Key; ValueName = 'DefaultSearchProviderSuggestURL'; Data = $SuggestURL; Type = 'String' } # Set default suggestion provider
+      )
+    }
   }
 
   $Policies += @(
@@ -109,18 +118,6 @@ if (!$Audit -and !$Reset) {
     [PSCustomObject]@{ Key = $EdgeKey; ValueName = 'TyposquattingCheckerEnabled'; Data = '1'; Type = 'Dword' }        # Warn user on typosquatting sites
     [PSCustomObject]@{ Key = $EdgeUpdateKey; ValueName = 'UpdateDefault'; Data = '1'; Type = 'Dword' }                # Always allow updates (all channels)
   )
-  
-  # Search Engine Policies
-  if ($SearchEngine) {
-    foreach ($Key in $Keys) {
-      $Policies += @(
-        [PSCustomObject]@{ Key = $Key; ValueName = 'DefaultSearchProviderEnabled'; Data = '1'; Type = 'Dword' }             # Enable default search provider
-        [PSCustomObject]@{ Key = $Key; ValueName = 'DefaultSearchProviderName'; Data = $SearchEngine; Type = 'String' }     # Set default search provider name
-        [PSCustomObject]@{ Key = $Key; ValueName = 'DefaultSearchProviderSearchURL'; Data = $SearchURL; Type = 'String' }   # Set default search provider
-        [PSCustomObject]@{ Key = $Key; ValueName = 'DefaultSearchProviderSuggestURL'; Data = $SuggestURL; Type = 'String' } # Set default suggestion provider
-      )
-    }
-  }
   
   Write-Output "`nSetting browser management policies..."
   $Policies | Set-PolicyFileEntry -Path $ComputerPolicyFile -ErrorAction Stop
