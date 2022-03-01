@@ -4,7 +4,7 @@ description: >-
   group policy.
 ---
 
-# Browser Extensions
+# Extension Management
 
 ## Overview
 
@@ -26,8 +26,8 @@ The script also allows extensions to be force installed by using the `-Force` pa
 
 Combining this script with the browser policies script will add an additional security layer to your clients' devices, for no additional cost.
 
-{% content-ref url="browsers.md" %}
-[browsers.md](browsers.md)
+{% content-ref url="browser-management.md" %}
+[browser-management.md](browser-management.md)
 {% endcontent-ref %}
 
 **Prerequisites:**
