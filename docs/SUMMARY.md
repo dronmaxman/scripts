@@ -27,6 +27,7 @@
   * [WPS Office](software/uninstallers/wps-office.md)
 * [Microsoft Office](software/microsoft-office/README.md)
   * [Install Office](software/microsoft-office/install-office.md)
+  * [Install Teams](software/installers/microsoft-teams.md)
   * [Update Office](software/microsoft-office/update.md)
 
 ## Misc
