@@ -11,8 +11,9 @@ try {
 
   # Install Program
   Start-Process -Wait -FilePath $Installer -ArgumentList '/sAll /rs /msi EULA_ACCEPT=YES'
-
-  # Remove Installer
-  Remove-Item $Installer
 }
-catch { throw $Error }
+catch { throw }
+finally {
+  # Remove Installer
+  Remove-Item $Installer -Force -ErrorAction Ignore
+}
