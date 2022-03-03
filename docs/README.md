@@ -10,7 +10,7 @@ description: >-
 **Disclaimer:** While scripts in this library are designed to be RMM agnostic, they are only tested locally and from my current RMM platform.
 {% endhint %}
 
-This library is a repository of PowerShell scripts designed for use by my fellow **IT Managed Service Providers** (MSPs), primarily geared towards smaller MSPs (including one-person shops).
+This library is a repository of PowerShell scripts designed for use by my fellow **IT Managed Service Providers** (MSPs), primarily geared towards smaller MSPs (including one-person shops). Internal IT teams may also find the scripts useful.
 
 **Each Script Page Includes:**
 
