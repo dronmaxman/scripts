@@ -8,8 +8,9 @@ try {
 
   # Install Google Earth Pro
   Start-Process -Wait -FilePath $Installer -ArgumentList 'OMAHA=1'
-
-  # Remove Installer
-  Remove-Item $Installer
 }
-catch { throw $Error }
+catch { throw }
+finally {
+  # Remove Installer
+  Remove-Item $Installer -Force -ErrorAction Ignore
+}
