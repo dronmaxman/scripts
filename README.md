@@ -1,3 +1,5 @@
 # Shared Script Library
 
-This library is a repository of PowerShell scripts designed for use by MSPs to automate tasks and manage client devices. It serves as a place for me to work on my PowerShell scripting and documentation writing abilities in a way that gives back to the community.
+This library is a repository of PowerShell scripts designed for use by my fellow IT Managed Service Providers (MSPs), primarily geared towards smaller MSPs (including one-person shops). They may be beneficial to internal IT teams as well.
+
+Documentation for scripts is located at https://scripts.redletter.tech.
