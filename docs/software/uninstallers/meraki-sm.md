@@ -16,8 +16,6 @@ description: PowerShell script to silently uninstall Meraki Systems Manager Agen
 
 {% embed url="https://gist.github.com/wise-io/5d61e2f97990c05058cd30c15411786b" %}
 
-{% embed url="https://rawcdn.githack.com/wise-io/scripts/391dfd17136b236a6103557f922532f6f56edfeb/powershell/RemoveMerakiSM.ps1" %}
-
 ## Learn More
 
 Want to learn more about how this script works? Included below are official documentation links for all cmdlets used in this script, as well as other useful documentation where applicable.
