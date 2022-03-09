@@ -23,7 +23,7 @@ description: PowerShell script to silently install Foxit Reader Enterprise.
 
 Want to learn more about how this script works? Included below are official documentation links for all cmdlets used in this script, as well as other useful documentation where applicable.
 
-{% embed url="https://cdn01.foxitsoftware.com/pub/foxit/manual/reader/en_us/FoxitReaderDeploymentAndConfiguration11.2.1_Manual.pdf" %}
+{% embed url="https://kb.foxitsoftware.com/hc/en-us/articles/360042235352-Foxit-PDF-Reader-MSI-Installer-Public-Properties-" %}
 
 {% embed url="https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/msiexec" %}
 
