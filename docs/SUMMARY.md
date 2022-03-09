@@ -14,6 +14,7 @@
 * [Installers](software/installers/README.md)
   * [Adobe Reader](software/installers/adobe-reader.md)
   * [Custom Fonts](software/installers/custom-fonts.md)
+  * [Foxit Reader](software/installers/foxit-reader.md)
   * [Google Earth Pro](software/installers/google-earth-pro.md)
   * [Microsoft Teams](software/installers/microsoft-teams.md)
   * [PowerShell](software/installers/powershell.md)
