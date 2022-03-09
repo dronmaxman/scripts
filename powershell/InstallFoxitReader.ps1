@@ -2,7 +2,7 @@
 # Register here: https://www.foxit.com/pdf-reader/enterprise-register.html
 
 param(
-  [switch]$Default # Sets Foxit as the default PDF reader
+  [switch]$Default # Attempt to set Foxit as the default PDF reader
 )
 
 $Installer = "$env:temp\FoxitReaderSetup.msi"
