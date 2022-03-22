@@ -13,7 +13,7 @@ This script will install the latest version of the **Microsoft Teams Machine-Wid
 By default, the script will install the Teams version matching the system architecture, but the `-x86` switch parameter can be used to install 32-bit Teams on 64-bit systems.
 
 {% hint style="info" %}
-**Note:** If a user uninstalls Teams from their user profile, it will not be reinstalled to their user profile automatically. To redeploy Teams for this user on a particular computer where it was uninstalled, follow [Microsoft's clean up and redeployment procedures](https://docs.microsoft.com/en-us/microsoftteams/msi-deployment#clean-up-and-redeployment-procedure).
+**Note:** If a user uninstalls Teams from their user profile, it will not be reinstalled to their user profile automatically. To redeploy Teams for this user, follow [Microsoft's clean up and redeployment procedures](https://docs.microsoft.com/en-us/microsoftteams/msi-deployment#clean-up-and-redeployment-procedure).
 {% endhint %}
 
 **Prerequisites:** This script requires no additional setup. Simply deploy it via your RMM.
