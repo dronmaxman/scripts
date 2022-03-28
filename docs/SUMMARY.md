@@ -30,8 +30,12 @@
   * [Install Office](software/microsoft-office/install-office.md)
   * [Update Office](software/microsoft-office/update.md)
 
+## Windows Settings <a href="#settings" id="settings"></a>
+
+* [Create Restore Point](settings/create-restore-point.md)
+* [Set Network Type](settings/set-network-type.md)
+
 ## Misc
 
 * [Backup SQL Databases](misc/backup-sql.md)
-* [Create Restore Point](misc/create-restore-point.md)
 * [Start Program](misc/start-program.md)
