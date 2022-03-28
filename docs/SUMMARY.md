@@ -12,6 +12,7 @@
 ## Software Management <a href="#software" id="software"></a>
 
 * [Installers](software/installers/README.md)
+  * [Adobe Acrobat](software/installers/adobe-acrobat.md)
   * [Adobe Reader](software/installers/adobe-reader.md)
   * [Custom Fonts](software/installers/custom-fonts.md)
   * [Foxit Reader](software/installers/foxit-reader.md)
