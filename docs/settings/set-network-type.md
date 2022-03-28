@@ -14,6 +14,8 @@ description: PowerShell script to set the network category (type) to Public or P
 
 ## Script
 
+**Usage:** `.\SetNetworkCategory.ps1 -Category Private`
+
 {% embed url="https://gist.github.com/wise-io/d3d4c54dd3c6faceab1bf4a4982767f8" %}
 
 ## Learn More
