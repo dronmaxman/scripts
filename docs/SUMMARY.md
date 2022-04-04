@@ -27,6 +27,7 @@
   * [Meraki SM](software/uninstallers/meraki-sm.md)
   * [QuickTime](software/uninstallers/quicktime.md)
   * [WPS Office](software/uninstallers/wps-office.md)
+  * [ZeroTier One](software/uninstallers/zerotier-one.md)
 * [Microsoft Office](software/microsoft-office/README.md)
   * [Install Office](software/microsoft-office/install-office.md)
   * [Update Office](software/microsoft-office/update.md)
