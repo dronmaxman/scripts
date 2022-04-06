@@ -6,11 +6,13 @@ description: PowerShell script to silently uninstall ZeroTier One and its compon
 
 ## Overview
 
-{% hint style="info" %}
-**Dev Insight:** This script was written to assist with uninstalling headless installations of ZeroTier One.
-{% endhint %}
-
 **Prerequisites:** This script requires no additional setup. Simply deploy it via your RMM.
+
+{% hint style="info" %}
+**Notes:** This script will not remove a device from the ZeroTier dashboard.
+
+A reboot is recommended after running this script if you plan to reinstall ZeroTier.&#x20;
+{% endhint %}
 
 ## Script
 
