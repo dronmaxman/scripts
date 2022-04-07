@@ -6,6 +6,10 @@ description: PowerShell script to silently deploy the latest ZeroTier One client
 
 ## Overview
 
+{% hint style="info" %}
+**Hint:** Need to remove ZeroTier? See the [ZeroTier removal script](../uninstallers/zerotier-one.md).
+{% endhint %}
+
 This script was written to ease deployment of the ZeroTier client across multiple systems. When the optional `-Token` parameter is used, the script will install the ZeroTier client, add it to your ZeroTier network, authorize it, and name the device. Additional parameters are available for the various configuration options.
 
 _Use of the `-Headless` parameter is recommended for a completely silent installation requiring no user interaction._
