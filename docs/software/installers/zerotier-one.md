@@ -31,6 +31,34 @@ _Use of the `-Headless` parameter is recommended for a completely silent install
 
 {% embed url="https://gist.github.com/wise-io/67dc7289edaedaf2a5340aadf81dfd37" %}
 
+## Usage Examples
+
+<details>
+
+<summary>Install ZeroTier UI &#x26; Join a Network</summary>
+
+`.\InstallZeroTier.ps1 -NetworkID 1234567890abcdef`
+
+</details>
+
+<details>
+
+<summary>Install ZeroTier (Headless), Join a Network, &#x26; Authorize</summary>
+
+`.\InstallZeroTier.ps1 -NetworkID 1234567890abcdef -Token aljdsfbisabfljdsfnklsdfkjbadsflkbsadls -Headless`
+
+</details>
+
+<details>
+
+<summary>Allow ZeroTier Client to ManageDNS</summary>
+
+`.\InstallZeroTier.ps1 -NetworkID 1234567890abcdef -ManageDNS`
+
+</details>
+
+
+
 ## Parameters
 
 * **`-NetworkID` (Required)** : ZeroTier Network ID for the network you are deploying
