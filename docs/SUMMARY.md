@@ -21,6 +21,7 @@
   * [PowerShell](software/installers/powershell.md)
   * [Splashtop RMM Viewer](software/installers/splashtop-rmm-viewer.md)
   * [Splashtop SOS](software/installers/splashtop-sos.md)
+  * [ZeroTier One](software/installers/zerotier-one.md)
   * [Zoom Meetings](software/installers/zoom-meetings.md)
 * [Uninstallers](software/uninstallers/README.md)
   * [LibreOffice](software/uninstallers/libreoffice.md)
