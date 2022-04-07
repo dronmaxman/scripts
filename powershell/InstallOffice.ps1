@@ -6,7 +6,6 @@
   .EXAMPLE
     ./InstallOffice.ps1 -Config "https://example.com/linktoconfig.xml" -download
   .LINK
-    ODT Download: https://www.microsoft.com/en-us/download/details.aspx?id=49117
     XML Configuration Generator: https://config.office.com/
 #>
 
@@ -16,23 +15,35 @@ param(
   [switch]$Download # Downloads Office if set
 )
 
-$DeploymentToolDownloadURL = '' # Host ODT at a trusted location
-$DeploymentTool = "$env:temp\office-deployment-tool.exe"
-$ConfigFile = "$env:temp\office-config.xml"
+$ODTDownloadURL = 'https://download.microsoft.com/download/2/7/A/27AF1BE6-DD20-4CB4-B154-EBAB8A7D4A7E/officedeploymenttool_14931-20120.exe'
+$ODTSetup = "$env:temp\ODTSetup.exe"
+$ODT = "$env:temp\ODT\"
+$ConfigFile = "$env:temp\ODT\office-config.xml"
 
 try {
-  # Download Office Deployment Tool & Configuration File
-  Invoke-WebRequest -Uri $DeploymentToolDownloadURL -OutFile $DeploymentTool
+  # Download Office Deployment Tool
+  Write-Output 'Downloading Office Deployment Tool (ODT)...'
+  Invoke-WebRequest -Uri $ODTDownloadURL -OutFile $ODTSetup
+  
+  # Extract ODT Files
+  Write-Output 'Extracting ODT...'
+  Start-Process -Wait -NoNewWindow -FilePath $ODTSetup -ArgumentList "/extract:$ODT /quiet"
+
+  # Download Configuration File
   Invoke-WebRequest -Uri $Config -OutFile $ConfigFile
 
   # Download Office If Requested
   if ($Download) {
     Write-Output 'Downloading Microsoft Office installation files...'
-    Start-Process -Wait -FilePath $DeploymentTool -ArgumentList "/download $ConfigFile"
+    Start-Process -Wait -FilePath "$ODT\setup.exe" -ArgumentList "/download $ConfigFile"
   }
 
   # Install Office
   Write-Output 'Installing Microsoft Office...'
-  Start-Process -Wait -FilePath $DeploymentTool -ArgumentList "/configure $ConfigFile"
+  Start-Process -Wait -FilePath "$ODT\setup.exe" -ArgumentList "/configure $ConfigFile"
 }
 catch { throw $Error }
+finally {
+  # Remove Setup Files
+  Remove-Item $ODT, $ODTSetup -Recurse -Force -ErrorAction Ignore
+}
