@@ -10,14 +10,14 @@ This script was written to ease deployment of the ZeroTier client across multipl
 
 _Use of the `-Headless` parameter is recommended for a completely silent installation requiring no user interaction._
 
+{% embed url="https://www.zerotier.com" %}
+
 **Prerequisites:**&#x20;
 
 1. Create a ZeroTier account / network
 2. Copy network ID
 3. Create an API access token (optional)
 4. Deploy ZeroTier using the script below
-
-{% embed url="https://www.zerotier.com" %}
 
 ## Script
 
