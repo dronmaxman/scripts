@@ -4,7 +4,7 @@
   .DESCRIPTION
     This script downloads ODT to download/install Microsoft Office with the provided configuration file.
   .EXAMPLE
-    ./InstallOffice.ps1 -Config "https://example.com/linktoconfig.xml" -download
+    ./InstallOffice.ps1 -Config "https://example.com/linktoconfig.xml" -Download
   .LINK
     XML Configuration Generator: https://config.office.com/
 #>
