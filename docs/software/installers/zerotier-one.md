@@ -23,13 +23,19 @@ _Use of the `-Headless` parameter is recommended for a completely silent install
 3. Create an API access token (optional)
 4. Deploy ZeroTier using the script below
 
-## Script
+## Installation Script
 
 {% hint style="info" %}
 **Note:** This script requires PowerShell 7 to access the ZeroTier API. If the `-Token` parameter is used and PowerShell 7 is not already installed, it will be installed by the script.
 {% endhint %}
 
 {% embed url="https://gist.github.com/wise-io/67dc7289edaedaf2a5340aadf81dfd37" %}
+
+## Update Script
+
+Although the above installation script can also be used to update a ZeroTier installation, I have provided a simpler script below to quickly update ZeroTier to the latest version, if it is already installed.
+
+{% embed url="https://gist.github.com/wise-io/a312b60186dfdac128268171c98b7d01" %}
 
 ## Usage Examples
 
