@@ -12,9 +12,16 @@ $Type = (Get-Culture).TextInfo.ToTitleCase($Type)
 Update-MpSignature
 
 # Run scan
-if ($Path) { Start-MpScan -ScanType 'Custom' -ScanPath $Path }
-elseif ($Type = 'Offline') { Start-MpWDOScan }
-else { Start-MpScan -ScanType $Type }
+if ($Path) {
+  Start-MpScan -ScanType 'Custom' -ScanPath $Path
+}
+elseif ($Type = 'Offline') { 
+  Start-MpWDOScan 
+  exit
+}
+else {
+  Start-MpScan -ScanType $Type
+}
 
 # Remove active threats
 Remove-MpThreat
