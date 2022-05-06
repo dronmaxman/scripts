@@ -29,7 +29,9 @@ _This is particular useful for clients that do not have_ [_Windows Defender for 
 
 ## Start a Scan
 
-The below script can be used to run on demand scans with Windows Defender, including offline scans and scans of individual files/folders.
+The below script can be used to run on demand scans with Windows Defender, including offline scans and scans of individual files/folders.&#x20;
+
+_This script can also be run on a schedule with your RMM of choice. Alternatively, let Windows handle scheduled scans with the policies set in the script above._
 
 {% hint style="danger" %}
 **Warning:** Using the `Offline` scan type in the below script will restart a user's device and may result in data loss. Use with caution.
