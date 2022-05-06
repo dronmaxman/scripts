@@ -12,18 +12,18 @@ description: >-
 **Note:** This script only manages local group policies (LGPO). It does not affect group policies applied from a Domain Controller, but will affect the resulting policies.
 {% endhint %}
 
-This script was written to provide a way to apply Windows Defender settings, and other security settings related to Windows Firewall and account auditing, across clients. By applying security settings through group policy, users cannot easily disable components or change the settings.
+These scripts were written to provide a way to apply Windows Defender settings, and other security settings related to Windows Firewall and account auditing, across clients. By applying security settings through group policy, users cannot easily disable components or change the settings.
 
-Combining this script with an RMM and [event log monitoring](https://docs.microsoft.com/en-us/microsoft-365/security/defender-endpoint/troubleshoot-microsoft-defender-antivirus?view=o365-worldwide) gives you a way to centrally manage and monitor Windows Defender, providing a valid option to third-party AV products to your clients.
+Combining these scripts with an RMM and [event log monitoring](https://docs.microsoft.com/en-us/microsoft-365/security/defender-endpoint/troubleshoot-microsoft-defender-antivirus?view=o365-worldwide) gives you a way to centrally manage/monitor Windows Defender, providing a valid alternative to third-party AV products to your clients.
 
 _This is particular useful for clients that do not have_ [_Windows Defender for Endpoint_](https://www.microsoft.com/en-us/security/business/threat-protection/endpoint-defender) _licensing._
+
+## Manage Defender Settings
 
 **Prerequisites:**
 
 1. Review/Adjust each policy setting in the script
 2. Deploy via RMM
-
-## Script
 
 {% embed url="https://gist.github.com/wise-io/b159133319a85e1dd7dc3eca6d982363" %}
 
