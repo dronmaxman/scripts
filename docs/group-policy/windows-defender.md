@@ -26,7 +26,7 @@ _This is particular useful for clients that do not have_ [_Windows Defender for 
 2. Deploy via RMM
 
 {% hint style="info" %}
-**Note Regarding ASR:** While this script can manage Windows Defender Attack Surface Reduction (ASR) rules, they are disabled by default because they may break certain software. It is recommended to set them to Audit Mode for a period and monitor the event log for issues before enabling them fully. _Certain ASR rules require proper licensing to function properly._
+**Note Regarding ASR:** While this script can manage Windows Defender Attack Surface Reduction (ASR) rules, they are disabled by default because they may break certain software. It is recommended to set them to Audit Mode for a period and monitor the event log for issues before enabling them fully. _Certain ASR rules require proper licensing to function._
 {% endhint %}
 
 {% embed url="https://gist.github.com/wise-io/b159133319a85e1dd7dc3eca6d982363" %}
