@@ -90,10 +90,9 @@ $Policies = @(
   [PSCustomObject]@{Key = "$ExploitGuardKey\Controlled Folder Access"; ValueName = 'EnableControlledFolderAccess'; Data = '2'; Type = 'Dword' } # Enable Controlled Folder Access (audit)
   [PSCustomObject]@{Key = "$ExploitGuardKey\Network Protection"; ValueName = 'EnableNetworkProtection'; Data = '1'; Type = 'Dword' } # Block dangerous websites
 
-  # Windows Defender ASR (disabled by default)
-  # Note: Some ASR settings require proper licensing to be fully enabled - use with caution
+  # Windows Defender ASR
   # 0 (Off), 1 (Block), or 2 (Audit)
-  [PSCustomObject]@{Key = "$ExploitGuardKey\ASR"; ValueName = 'ExploitGuard_ASR_Rules'; Data = '0'; Type = 'Dword' } # Enable ASR ( 0-Disable, 1-Enable)
+  [PSCustomObject]@{Key = "$ExploitGuardKey\ASR"; ValueName = 'ExploitGuard_ASR_Rules'; Data = '0'; Type = 'Dword' } # Enable ASR
   [PSCustomObject]@{Key = "$ExploitGuardKey\ASR\Rules"; ValueName = '7674ba52-37eb-4a4f-a9a1-f0f9a1619a2c'; Data = '0'; Type = 'String' } # Block Adobe Reader from creating child processes
   [PSCustomObject]@{Key = "$ExploitGuardKey\ASR\Rules"; ValueName = 'D4F940AB-401B-4EFC-AADC-AD5F3C50688A'; Data = '0'; Type = 'String' } # Block all Office applications from creating child processes
   [PSCustomObject]@{Key = "$ExploitGuardKey\ASR\Rules"; ValueName = '9e6c4e1f-7d60-472f-ba1a-a39ef669e4b2'; Data = '0'; Type = 'String' } # Block credential stealing from the Windows local security authority subsystem (lsass.exe)
