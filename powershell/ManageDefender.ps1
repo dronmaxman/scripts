@@ -62,6 +62,7 @@ $Policies = @(
   [PSCustomObject]@{Key = "$DefenderKey\Real-Time Protection"; ValueName = 'DisableOnAccessProtection'; Data = '0'; Type = 'Dword' } # Monitor file/program activity
   [PSCustomObject]@{Key = "$DefenderKey\Real-Time Protection"; ValueName = 'DisableIOAVProtection'; Data = '0'; Type = 'Dword' } # Scan downloaded files/attachments
   [PSCustomObject]@{Key = "$DefenderKey\Real-Time Protection"; ValueName = 'RealtimeScanDirection'; Data = '0'; Type = 'Dword' } # Monitor incoming/outgoing file activity
+  [PSCustomObject]@{Key = "$DefenderKey\Real-Time Protection"; ValueName = 'DisableScriptScanning'; Data = '0'; Type = 'Dword' } # Scan scripts
   [PSCustomObject]@{Key = "$DefenderKey\Real-Time Protection"; ValueName = 'LocalSettingOverrideDisableOnAccessProtection'; Data = '0'; Type = 'Dword' } # Prevent disabling on access protection
   [PSCustomObject]@{Key = "$DefenderKey\Real-Time Protection"; ValueName = 'LocalSettingOverrideRealtimeScanDirection'; Data = '0'; Type = 'Dword' } # Prevent disabling monitoring incoming/outgoing file activity
   [PSCustomObject]@{Key = "$DefenderKey\Real-Time Protection"; ValueName = 'LocalSettingOverrideDisableIOAVProtection'; Data = '0'; Type = 'Dword' } # Prevent disabling scanning downloaded files
