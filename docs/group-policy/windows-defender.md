@@ -49,6 +49,8 @@ _This script can also be run on a schedule with your RMM of choice. Alternativel
 
 The below script can be used to add, remove, or audit exclusions for Windows Defender.&#x20;
 
+{% embed url="https://docs.microsoft.com/en-us/microsoft-365/security/defender-endpoint/common-exclusion-mistakes-microsoft-defender-antivirus?view=o365-worldwide" %}
+
 {% embed url="https://gist.github.com/wise-io/7d82c4216c5007a5be70c15699d338ff" %}
 
 **Parameters:**
