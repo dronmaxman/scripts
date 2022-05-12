@@ -32,7 +32,7 @@ Specifies the files and paths to exclude from Attack Surface Reduction (ASR) rul
 
 **`-Ext`**
 
-Specifies an array of file name extensions, such as obj or lib, to exclude from scheduled, custom, and real-time scanning. This cmdlet removes the exclusions that you specify.
+Specifies an array of file name extensions, such as obj or lib, to exclude from scheduled, custom, and real-time scanning.
 
 **Usage:** `.\ManageDefenderExclusions.ps1 -Ext ost, pst`
 
@@ -48,7 +48,7 @@ Specifies an array of IP addresses to exclude from scheduled and real-time scann
 
 **`-Path`**
 
-Specifies an array of file paths to exclude from scheduled and real-time scanning. This cmdlet removes the exclusions that you specify.
+Specifies an array of file paths to exclude from scheduled and real-time scanning.&#x20;
 
 **Usage:** `.\ManageDefenderExclusions.ps1 -Path "C:\Utilities"`
 
@@ -56,7 +56,7 @@ Specifies an array of file paths to exclude from scheduled and real-time scannin
 
 **`-Process`**
 
-Specifies an array of processes, as paths to process images. This cmdlet removes exclusions of files opened by the processes that you specify.
+Specifies an array of processes, as paths to process images.&#x20;
 
 **Usage:** `.\ManageDefenderExclusions.ps1 -Process Code.exe`
 
@@ -64,7 +64,7 @@ Specifies an array of processes, as paths to process images. This cmdlet removes
 
 **`-Remove`**
 
-The `-Remove` switch parameter will remove all specified exclusions from Windows Defender.
+Removes the exclusions that you specify.
 
 **Usage:** `.\ManageDefenderExclusions.ps1 -Remove -Ext ost, pst -Path "C:\Utilities"`
 
