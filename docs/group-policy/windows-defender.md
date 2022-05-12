@@ -18,7 +18,7 @@ Combining this script with an RMM and [event log monitoring](https://docs.micros
 
 _This is particular useful for clients that do not have_ [_Windows Defender for Endpoint_](https://www.microsoft.com/en-us/security/business/threat-protection/endpoint-defender) _licensing._
 
-## Manage Settings
+## Script
 
 **Prerequisites:**
 
