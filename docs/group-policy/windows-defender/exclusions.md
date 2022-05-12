@@ -16,7 +16,7 @@ This script can be used to add, remove, or audit exclusions for Windows Defender
 
 **`-Audit`**
 
-The `-Audit` switch parameter displays a list of all currently applied exclusions rules after any new rules have been applied. If no parameters are passed to the script, `-Audit` is used.
+Displays a list of all currently applied exclusions rules after any new rules have been applied. If no parameters are passed to the script, `-Audit` is used.
 
 **Usage:** `.\ManageDefenderExclusions.ps1 -Audit`
 
