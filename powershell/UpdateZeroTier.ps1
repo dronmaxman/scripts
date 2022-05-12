@@ -29,6 +29,7 @@ if ($RegKey) {
     if ($Headless) {
       # Install & unhide from installed programs list
       cmd /c msiexec /i $Installer /qn /norestart 'ZTHEADLESS=Yes'
+      $RegKey = Get-ChildItem -Path $Paths | Get-ItemProperty | Where-Object { $_.DisplayName -like 'ZeroTier One' } | Select-Object
       Remove-ItemProperty -Path $RegKey.PSPath -Name 'SystemComponent' -ErrorAction Ignore
     }
     else {
