@@ -10,8 +10,6 @@ This script can be used to add, remove, or audit exclusions for Windows Defender
 
 **Prerequisites:** This script requires no additional setup. Simply deploy it via your RMM.
 
-## Script
-
 {% embed url="https://gist.github.com/wise-io/7d82c4216c5007a5be70c15699d338ff" %}
 
 ## Parameters
